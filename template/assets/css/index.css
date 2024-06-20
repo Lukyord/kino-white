@@ -1,0 +1,47 @@
+/*MAIN====================*/
+
+/*HERO====================*/
+.hero {
+}
+
+.band-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 56.25vw;
+}
+
+.band-bg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.band-bg > .object-fit {
+  width: 100%;
+  height: 100%;
+}
+
+.band-image {
+  position: relative;
+  max-width: 39.09722222vw;
+}
+
+.band-image > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+}
+
+.band-logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
