@@ -9,6 +9,10 @@
 }
 
 @media (min-width: 992px) {
+  .hidden-device-md {
+    display: none !important;
+  }
+
   /*GENERAL*/
   .container.xl {
     max-width: calc(var(--container-xl) + var(--spacing-container) * 2);
@@ -59,18 +63,33 @@
   .field.half {
     width: calc(50% - var(--spacing-sm) / 2);
   }
-
-  /* HEADER */
-
-  /* FOOTER */
-
-  /* SECTION */
 }
 
-@media (min-width: 1200px) {
-}
+@media (min-width: 992px) and (max-width: 1600px) {
+  :root {
+    --font-size-overline: 0.875vw;
+    --font-size-button: 0.875vw;
+    --font-size-body: 1vw;
+    --font-size-subtitle2: 0.8125vw;
+    --font-size-subtitle1: 0.875vw;
+    --font-size-h3: 1vw;
+    --font-size-h2: 1.25vw;
+    --font-size-h1: 3vw;
 
-@media (min-width: 1280px) {
+    --line-height-overline: 1.125vw;
+    --line-height-button: 1.125vw;
+    --line-height-body: 1.375vw;
+    --line-height-subtitle2: 1vw;
+    --line-height-subtitle1: 1.125vw;
+    --line-height-h3: 1.25vw;
+    --line-height-h2: 1.5625vw;
+    --line-height-h1: 3.375vw;
+
+    --icon-size-xs: 0.5vw;
+    --icon-size: 1.25vw;
+    --icon-size-lg: 1.5vw;
+    --icon-size-xl: 2vw;
+  }
 }
 
 /*MEDIA QUERIES:MAX====================*/
@@ -78,6 +97,26 @@
 }
 
 @media (max-width: 991px) {
+  :root {
+    --font-size-overline: 14px;
+    --font-size-button: 14px;
+    --font-size-body: 16px;
+    --font-size-subtitle2: 13px;
+    --font-size-subtitle1: 14px;
+    --font-size-h3: 16px;
+    --font-size-h2: 20px;
+    --font-size-h1: 48px;
+
+    --line-height-overline: 18px;
+    --line-height-button: 18px;
+    --line-height-body: 22px;
+    --line-height-subtitle2: 16px;
+    --line-height-subtitle1: 18px;
+    --line-height-h3: 20px;
+    --line-height-h2: 25px;
+    --line-height-h1: 54px;
+  }
+
   .hidden-device-sm {
     display: none !important;
   }
@@ -141,14 +180,6 @@
 @media (max-width: 575px) {
   .hidden-mobile-sm {
     display: none !important;
-  }
-
-  :root {
-    --font-size-h5: 20px;
-    --font-size-h4: 24px;
-    --font-size-h3: 28px;
-    --font-size-h2: 32px;
-    --font-size-h1: 38px;
   }
 }
 

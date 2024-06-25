@@ -8,6 +8,20 @@ jQuery(function ($) {
     });
   });
 
+  if ($("*[data-split]").length) {
+    Splitting({
+      target: "[data-split]",
+      by: "chars",
+      key: null,
+    });
+
+    $("*[data-split][data-split-animate]")
+      .find(".word")
+      .each(function () {
+        $(this).wrapInner('<span class="word-animate animate"></span>');
+      });
+  }
+
   $(".accordion .animate").each(function () {
     $(this).removeClass("animate fadeIn");
   });
@@ -952,7 +966,27 @@ jQuery(function ($) {
 });
 
 // EFFECT
-const lenis = new Lenis({
-  smooth: true,
-  eventsTarget: document.querySelector("#page"),
+// ===== LENIS =====
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// ===== GSAP =====
+// gsap.registerPlugin(ScrollTrigger);
+let panels = gsap.utils.toArray(".gsap-panel");
+
+panels.forEach((panel) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top",
+    pin: true,
+    pinSpacing: false,
+  });
 });

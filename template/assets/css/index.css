@@ -1,8 +1,18 @@
+/*ANIMATION====================*/
+@keyframes wordReveal {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(0, 1.1em, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 /*MAIN====================*/
 
 /*HERO====================*/
-.hero {
-}
 
 .band-slide {
   display: flex;
@@ -28,13 +38,13 @@
 
 .band-image {
   position: relative;
-  max-width: 39.09722222vw;
+  width: 39.09722222vw;
+  height: fit-content;
 }
 
 .band-image > img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
 }
@@ -43,5 +53,196 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 50%);
+}
+
+.band-logo > img {
+  object-fit: contain;
+  object-position: center;
+  max-width: 313px;
+  max-height: 135px;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .hero .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .band-slide {
+    height: 216.4102564103vw;
+  }
+
+  .band-bg {
+    aspect-ratio: 0.4924242424;
+    width: auto;
+    height: 100%;
+  }
+
+  .band-image {
+    width: 80vw;
+  }
+
+  .band-logo > img {
+    max-width: 195px;
+    max-height: 84px;
+  }
+}
+
+/*TOURS-SECTION====================*/
+.index-tours {
+  display: flex;
+  flex-direction: column;
+}
+
+.index-tours .tabs {
+  height: auto;
+  width: fit-content;
+}
+
+.index-tours .swiper,
+.index-tours .swiper .swiper-wrapper,
+.index-tours .swiper .swiper-wrapper .swiper-slide {
+  width: auto !important;
+  height: 100% !important;
+  margin: 0;
+}
+
+.index-tours .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-tours
+  .swiper
+  .swiper-wrapper
+  .swiper-slide:not(:first-of-type):not(:last-of-type) {
+  padding: 0 var(--spacing-md);
+}
+
+.index-tours .swiper .swiper-slide > a {
+  transition: var(--duration) var(--timing-function);
+  line-height: calc(var(--line-height-body) + 12px);
+  position: relative;
+}
+
+.index-tours .swiper .swiper-slide > a:hover {
+  text-shadow: var(--text-shadow-black);
+}
+
+.index-tours .swiper .swiper-slide > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-black);
+  bottom: 0;
+  left: 0;
+  transition: var(--duration) var(--timing-function);
+}
+
+.index-tours .swiper .swiper-slide > a.active:before {
+  width: 100%;
+}
+
+.index-tours .swiper .swiper-slide > a.active {
+  text-shadow: var(--text-shadow-black);
+}
+
+.tour-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.tour-card .tour-card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-card .tour-card-image > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.3333333333;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tour-card .tour-card-image:hover > img {
+  transform: scale(1.05);
+}
+
+.tour-card .tour-card-image .tour-sale-date {
+  position: absolute;
+  top: var(--spacing-2xs);
+  left: var(--spacing-2xs);
+}
+
+.tour-card .tour-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  justify-content: space-between;
+  flex: 1;
+}
+
+.index-tours-btn {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1750px) {
+  .tours-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 727px) {
+  .index-tours-btn {
+    justify-content: start;
+  }
+}
+
+/*LATEST-UPDATE====================*/
+.latest-update {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.latest-update-content {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.latest-update-content > div {
+  width: 50%;
+  height: auto;
+}
+
+.latest-update-content .separator-gray-dark {
+  display: none;
+  width: 100%;
+  border: 1px solid var(--color-gray-dark);
+}
+
+@media (max-width: 991px) {
+  .latest-update-content {
+    flex-direction: column;
+  }
+
+  .latest-update-content > div {
+    width: 100%;
+  }
+
+  .latest-update-content .separator-gray-dark {
+    display: block;
+  }
 }

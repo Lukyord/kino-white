@@ -25,8 +25,12 @@
   transition: var(--duration) var(--timing-function);
 }
 
+.panel .menu .active {
+  border-bottom: 1px solid var(--color-white);
+}
+
 .panel .menu a:hover {
-  text-shadow: 0 0 1.85px #fff, 0 0 1.85px #fff;
+  text-shadow: var(--text-shadow-white);
 }
 
 @media (min-width: 992px) {
