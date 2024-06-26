@@ -11,7 +11,7 @@
                 <?php } ?>
             </figure>
         </div>
-        <div class="band-image animate fadeIn delay-2">
+        <div class="band-image">
             <img src="<?php echo $hero_slide["band-image"] ?>" alt="band Image">
 
             <div class="band-logo">

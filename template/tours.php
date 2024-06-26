@@ -49,7 +49,6 @@
                 </picture>
             <?php } ?>
         </div>
-
     </section>
 
     <section class="sc bg-white">

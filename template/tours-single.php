@@ -3,7 +3,7 @@
 <?php include($root . "header.php"); ?>
 
 <main id="main" class="tours-single-main">
-
+    <div class="screen-overlay"></div>
     <div class="gradient-bg"></div>
 
     <section class="tours-single-hero">
@@ -68,10 +68,13 @@
     </section>
 
     <section class="sc tours-info">
+        <div class="locations-dropdown hidden-device-md">
+            <a href="javascript:;" class="locations-dropdown-trigger">
+                <p class="weight-bold uppercase size-h3"> Choose Location</p>
+                <span class="ic ic-chevron-down c-gray"></span>
+            </a>
+        </div>
         <div class="locations" data-lenis-prevent>
-            <div class="summary-location-select margin-top-2xs hidden-device-md">
-                <a href="#" class="button button-secondary weight-bold width-full">Choose Location</a>
-            </div>
             <div class="location-summary uppercase">
                 <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">XG 1st WORLD TOUR “The first HOWL”</h3>
                 <div class="location-summary-body">
@@ -116,7 +119,7 @@
             <div class="separator-gray-light"></div>
             <div class="info-grid">
                 <div>
-                    <h4 class="weight-bold padding-bottom-xs size-subtitle1">Seating</h4>
+                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Seating</h4>
                     <table class="ticket-table">
                         <tbody>
                             <tr>
@@ -148,31 +151,31 @@
                     <p>ADDITIONAL TRANSACTION FEES AND CREDIT/DEBIT CARD PROCESSING FEES MAY APPLY.</p>
                 </div>
                 <div>
-                    <h4 class="weight-bold padding-bottom-xs size-subtitle1">Age restrictions</h4>
+                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Age restrictions</h4>
                     <p>Licensed All Ages</p>
                 </div>
                 <div>
-                    <h4 class="weight-bold padding-bottom-xs size-subtitle1">Ticket limits</h4>
+                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket limits</h4>
                     <p>Per purchaser, per show</p>
                 </div>
                 <div>
-                    <h4 class="weight-bold padding-bottom-xs size-subtitle1">Ticket suppression</h4>
+                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket suppression</h4>
                     <p>As an anti-scalping measure, ticket delivery will be suppressed until:
                         Mon 3 Feb 2025</p>
                 </div>
                 <div>
-                    <h4 class="weight-bold padding-bottom-xs size-subtitle1">Accessibility</h4>
+                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Accessibility</h4>
                     <p>For Accessible seating and/or access, call Ticketek's
                         Accessible Seating booking line: 1300 665 915 
                         This venue accepts companion cards.</p>
                 </div>
                 <div>
-                    <h4 class="weight-bold padding-bottom-xs size-subtitle1">Set Times</h4>
+                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Set Times</h4>
                     <p>Please check back closer to the show for set times.</p>
                 </div>
             </div>
             <div class="venue padding-top-sm">
-                <h4 class="weight-bold size-subtitle1">Venue</h4>
+                <h4 class="uppercase weight-bold size-subtitle1">Venue</h4>
                 <div class="map-and-address">
                     <div class="map">
                         <img src="./assets/img/design/mock-map.png" alt="mock map">
@@ -186,6 +189,46 @@
                     </div>
                 </div>
             </div>
+
+            <div class="ticket-info-buy-tickets hidden-device-md">
+                <a href="#" class="button button-primary width-full">Buy Ticket</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sc two-sides">
+        <div class="sc-header">
+            <div class="title">
+                <h1 class="size-h1 weight-bold" data-split data-split-animate>LATEST UPDATE</h1>
+            </div>
+            <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-sm">View All Update</a>
+        </div>
+
+        <div class="two-sides-content">
+            <div class="left-side">
+                <div class="tour-box large">
+                    <div class="title-and-date">
+                        <h3 class="size-h3">Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand</h3>
+                        <p class="size-subtitle2 uppercase">21 Nov 2023</p>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/img/design/large-tour-box-image-2.png" alt="tour-box-image">
+                    </div>
+                </div>
+            </div>
+            <div class="separator-gray-dark"></div>
+            <div class="right-side">
+                <div class="tour-box large">
+                    <div class="title-and-date">
+                        <h3 class="size-h3">Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand</h3>
+                        <p class="size-subtitle2 uppercase">21 Nov 2023</p>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/img/design/large-tour-box-image-3.png" alt="tour-box-image">
+                    </div>
+                </div>
+            </div>
+            <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-md">View All Update</a>
         </div>
     </section>
 </main>

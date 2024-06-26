@@ -1,4 +1,22 @@
 /*TOURS-SINGLE====================*/
+.screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  display: none;
+  opacity: 0;
+  transition: var(--duration-x2) var(--timing-function);
+}
+
+.screen-overlay.show {
+  display: block;
+  opacity: 1;
+  transition: var(--duration-x2) var(--timing-function);
+}
 
 /*TOURS-SINGLE-HERO====================*/
 .tours-short-info {
@@ -193,7 +211,7 @@
 }
 
 /* LOCATIONS */
-.locations {
+.tours-info .locations {
   position: relative;
   width: 33%;
   overflow-y: scroll;
@@ -325,6 +343,10 @@
     flex-direction: column;
     grid-gap: var(--spacing-sm);
   }
+
+  .ticket-info-buy-tickets {
+    display: none;
+  }
 }
 
 @media (max-width: 991px) {
@@ -337,18 +359,66 @@
     flex-direction: column;
     justify-content: unset;
     margin-top: -2px;
+    position: relative;
+    width: 100%;
   }
 
-  .locations {
+  .tours-info:before {
+    content: "";
+    width: 100%;
+    height: var(--spacing-2xl);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-black);
+  }
+
+  .tours-info .locations {
     width: 100%;
     background-color: var(--color-black);
     padding: var(--spacing-2xs) var(--spacing-xs) var(--spacing-sm)
       var(--spacing-xs);
+    overflow-y: visible;
+  }
+
+  .locations-dropdown {
+    padding: var(--spacing-xs);
+    padding-bottom: 0;
+    position: sticky;
+    top: calc(var(--header-height) + var(--spacing-xs));
+    z-index: 40;
+    transition: var(--duration-x2) var(--timing-function);
+  }
+
+  .locations-dropdown.hide {
+    transform: translateY(
+      calc(-100% - (var(--header-height) + var(--spacing-xs)))
+    );
+    top: calc(var(--header-height) + var(--spacing-xs));
+  }
+
+  .locations-dropdown-trigger {
+    border: 1px solid var(--color-gray);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    align-items: center;
+    background-color: var(--color-white);
+  }
+
+  .locations-dropdown-trigger span {
+    transition: var(--duration) var(--timing-function);
+  }
+
+  .locations-dropdown-trigger.active span {
+    rotate: 180deg;
   }
 
   .locations .location {
-    border: none;
     min-height: unset;
+    visibility: visible !important;
+    animation: none !important;
   }
 
   .location-summary {
@@ -381,19 +451,85 @@
     padding: var(--spacing-3xs);
   }
 
-  .location-status.on-sale {
-    background-color: var(--color-green);
-  }
-
-  .location-status.sold-out {
-    background-color: var(--color-gray);
-  }
-
-  .location-status.coming-soon {
-    background-color: var(--color-black);
-  }
-
   .locations-scroll {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overscroll-behavior: contain;
+    z-index: 40;
+    padding: 0 var(--spacing-xs);
+  }
+
+  .locations-scroll .location {
+    border: none;
+  }
+
+  .location-body {
+    grid-row-gap: var(--spacing-2xs);
+  }
+
+  .location-body > div > h3 {
+    padding-bottom: var(--spacing-3xs);
+  }
+
+  .location-body .location-button {
+    display: none;
+  }
+
+  /* TICKET INFO */
+  .ticket-info {
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-xs);
+  }
+
+  .ticket-info > .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid > div {
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-gray-light);
+  }
+
+  .ticket-table td:nth-child(2) {
+    text-align: end;
+  }
+
+  .map-and-address {
+    flex-direction: column;
+    justify-content: unset;
+    gap: var(--spacing-sm);
+  }
+
+  .map-and-address .map {
+    width: 100%;
+  }
+
+  .map-and-address .address {
+    width: 100%;
+  }
+
+  .ticket-info-buy-tickets {
+    opacity: 0;
+    visibility: hidden;
+    position: sticky;
+    bottom: var(--spacing-xs);
+    transition: var(--duration) var(--timing-function);
+    transform: translateY(100%);
+  }
+
+  .ticket-info-buy-tickets.sticky {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: var(--duration) var(--timing-function);
   }
 }

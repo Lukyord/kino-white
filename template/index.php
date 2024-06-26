@@ -74,7 +74,7 @@
         </div>
     </section>
 
-    <section class="sc latest-update">
+    <section class="sc two-sides">
         <div class="sc-header">
             <div class="title">
                 <h1 class="size-h1 weight-bold" data-split data-split-animate>LATEST UPDATE</h1>
@@ -82,7 +82,7 @@
             <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-sm">View All Update</a>
         </div>
 
-        <div class="latest-update-content">
+        <div class="two-sides-content">
             <div class="left-side">
                 <div class="tour-box large">
                     <div class="title-and-date">
