@@ -54,6 +54,9 @@ $(document).ready(function () {
   function checkStickyBuyTickets() {
     var ticketInfo = $(".ticket-info");
     var ticketInfoBuyTickets = $(".ticket-info-buy-tickets");
+
+    if (ticketInfo.length == 0 || ticketInfoBuyTickets.length == 0) return;
+
     var ticketInfoTop = ticketInfo.offset().top;
 
     if ($(window).scrollTop() - ticketInfoTop + 80 > 0) {
@@ -83,7 +86,9 @@ $(document).ready(function () {
   }
 
   function toggleLocationsDropdown() {
-    var latestUpdateSection = $(".latest-update");
+    var latestUpdateSection = $(".tours-single-main .two-sides");
+
+    if (latestUpdateSection.length == 0) return;
 
     if (isInView(latestUpdateSection)) {
       locationsDropdown.addClass("hide");
@@ -144,7 +149,7 @@ jQuery(function ($) {
   });
 
   // Close dropdown when a location is clicked
-  $(".tours-info .locations-scroll .location").click(function () {
+  function handleLocationClick() {
     var screenOverlay = $(".screen-overlay");
     var toursInfo = $(".tours-info");
 
@@ -153,5 +158,29 @@ jQuery(function ($) {
       toursInfo.find(".locations-scroll").slideToggle();
       screenOverlay.removeClass("show");
     }, 150);
+  }
+
+  $(".tours-info .locations-scroll .location").on("click", handleLocationClick);
+});
+
+// RESET LOCATIONS DROPDOWN ON SCREEN CHANGE
+jQuery(function ($) {
+  function resetLocationsDropdownIfOpen() {
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      var toursInfo = $(".tours-info");
+      var dropdownTrigger = toursInfo.find(".locations-dropdown-trigger");
+      if (dropdownTrigger.hasClass("active")) {
+        toursInfo.find(".locations-scroll").slideToggle();
+        toursInfo.find(".locations-scroll").show();
+        $(".screen-overlay").removeClass("show");
+        dropdownTrigger.removeClass("active");
+      }
+    }
+  }
+
+  resetLocationsDropdownIfOpen();
+
+  $(window).resize(function () {
+    resetLocationsDropdownIfOpen();
   });
 });

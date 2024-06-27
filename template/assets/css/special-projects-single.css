@@ -1,0 +1,46 @@
+/*SPECIAL-PROJECTS-SINGLE====================*/
+
+/*SPECIAL-PROJECTS-GALLERY====================*/
+.special-projects-gallery {
+  background-color: var(--color-black);
+}
+
+.special-projects-gallery .swiper {
+  padding: var(--spacing-lg) 0;
+}
+
+.special-projects-gallery .swiper .swiper-slide {
+  width: 75vw !important;
+  padding: 0 2.5vw !important;
+}
+
+.special-projects-gallery .swiper .swiper-slide .gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+.special-projects-gallery .swiper .swiper-slide .gallery-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1.5;
+}
+
+.special-projects-gallery .swiper .swiper-pagination {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .special-projects-gallery .swiper .swiper-slide {
+    width: 100vw !important;
+    padding: 0 !important;
+  }
+
+  .special-projects-gallery
+    .swiper
+    > .swiper-pagination.swiper-pagination-bullets {
+    display: flex;
+    bottom: var(--spacing-sm) !important;
+  }
+}

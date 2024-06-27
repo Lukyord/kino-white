@@ -460,14 +460,18 @@ jQuery(function ($) {
     var _windowHeight = $(window).outerHeight() / 4;
 
     if (window.location.hash) {
-      $("html, body")
-        .delay(100)
-        .animate(
-          {
-            scrollTop: $(window.location.hash).offset().top - _windowHeight,
-          },
-          800
-        );
+      var target = $(window.location.hash);
+
+      if (target.length) {
+        $("html, body")
+          .delay(100)
+          .animate(
+            {
+              scrollTop: target.offset().top - _windowHeight,
+            },
+            800
+          );
+      }
     }
   }, 100);
 });
@@ -791,7 +795,9 @@ jQuery(function ($) {
         slideLoop = _this.hasClass("loop"),
         slideAutoplay = _this.hasClass("autoplay"),
         slideClicked = _this.hasClass("clicked"),
-        slidePause = _this.hasClass("pause");
+        slidePause = _this.hasClass("pause"),
+        slideGrabCursor = _this.hasClass("grab"),
+        slideGrabCursorMobile = _this.hasClass("grab-m");
 
       //CHECK
       var slideTotal = _this.find(".swiper-slide").length;
@@ -800,7 +806,7 @@ jQuery(function ($) {
       const swiper = new Swiper(_this[0], {
         //resistanceRatio: 0,
         spaceBetween: 0,
-        grabCursor: true,
+        grabCursor: slideGrabCursorMobile,
         pagination: {
           el: slidePagination,
           type: "bullets",
@@ -827,6 +833,7 @@ jQuery(function ($) {
         breakpoints: {
           992: {
             centeredSlides: slideCentered,
+            grabCursor: slideGrabCursor,
           },
         },
         init: false,
@@ -988,5 +995,25 @@ panels.forEach((panel) => {
     start: "top top",
     pin: true,
     pinSpacing: false,
+  });
+});
+
+// HERO IMAGE SIZE CHECK
+jQuery(function ($) {
+  $(".hero-image-content").each(function () {
+    var img = $(this);
+
+    img.on("load", function () {
+      var width = this.naturalWidth;
+      var height = this.naturalHeight;
+
+      if (width / height < 1.5) {
+        img.addClass("vertical");
+      }
+    });
+
+    if (img[0].complete) {
+      img.trigger("load");
+    }
   });
 });

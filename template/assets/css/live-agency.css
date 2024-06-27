@@ -1,0 +1,52 @@
+/*LIVE-AGENCY====================*/
+
+/*LIVE-AGENCY-HERO====================*/
+.live-agency-hero {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.live-agency-hero .hero-content {
+  position: relative;
+}
+
+.live-agency-hero .hero-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.live-agency-hero .hero-content .hero-content-text {
+  position: absolute;
+  left: var(--spacing-md);
+  bottom: var(--spacing-lg);
+  width: 50%;
+  max-width: 650px;
+}
+
+.hero-content-text h1 {
+  padding-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 992px) {
+  .live-agency-hero .hero-content .hero-content-text {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: unset;
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .live-agency-hero .hero-content {
+    max-height: 50vh;
+  }
+}
+
+/*LIVE-AGENCY-GRID====================*/
+.live-agency-grid {
+  width: 100%;
+  height: 2000px;
+  background-color: aqua;
+}

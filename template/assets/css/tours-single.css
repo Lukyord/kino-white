@@ -44,7 +44,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-sm);
-  max-width: 60%; /* Adjust this value as needed */
+  max-width: 60%;
 }
 
 .subtitle-info div {
@@ -55,13 +55,6 @@
 
 .subtitle-info div:last-of-type {
   justify-content: space-between;
-}
-
-.subtitle-info div .socials {
-  display: flex;
-  gap: var(--spacing-sm);
-  flex-direction: row;
-  justify-content: start;
 }
 
 @media (min-width: 992px) {
@@ -110,7 +103,7 @@
     padding: var(--spacing-md);
   }
 
-  .read-more-ctrl {
+  .read-more-toggle {
     display: none;
   }
 }
@@ -197,7 +190,7 @@
     overflow: visible;
   }
 
-  .read-more-ctrl {
+  .read-more-toggle {
     display: block;
   }
 }
@@ -272,6 +265,10 @@
 .location-status.coming-soon {
   background-color: var(--color-black);
 }
+/* 
+.location.active .location-body .location-status {
+
+} */
 
 /* TICKET INFO */
 .ticket-info {
@@ -335,11 +332,15 @@
 
   .locations .locations-scroll {
     position: absolute;
-    top: 0;
+    top: 0 !important;
     left: 0;
     bottom: 0;
     right: 0;
-    display: flex;
+    height: auto !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
     flex-direction: column;
     grid-gap: var(--spacing-sm);
   }

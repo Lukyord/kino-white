@@ -25,12 +25,12 @@ if ($location["status"] == "on-sale") {
             <p class="c-gray"><?php echo $location["venue"] ?></p>
         </div>
         <div class="location-status <?php echo $location_status_class ?>">
-            <p class="c-white size-overline weight-bold">
-                <?php echo $location_status_text ?>
-            </p>
+            <p class="c-white size-overline weight-bold"><?php echo $location_status_text ?></p>
         </div>
         <div class="location-button">
-            <a href="javascript;:" class="button button-primary <?php echo $location["status"] == "sold-out" ? "disabled" : "" ?>">buy tickets</a>
+            <a href="javascript;:" class="button button-primary <?php echo ($location["status"] == "sold-out" || $location["status"] == "coming-soon") ? "disabled" : "" ?>">
+                buy tickets
+            </a>
         </div>
     </div>
 </div>

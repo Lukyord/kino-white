@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="main" class="tours-single-main">
+<main id="tours-single-main" class="tours-single-main">
     <div class="screen-overlay"></div>
     <div class="gradient-bg"></div>
 
@@ -46,11 +46,11 @@
                         </div>
                         <div>
                             <h3 class="weight-bold">Social</h3>
-                            <div class="socials">
-                                <a href="#" class="ic ic-facebook size-icon-lg"></a>
-                                <a href="#" class="ic ic-instagram size-icon-lg"></a>
-                                <a href="#" class="ic ic-twitter size-icon-lg"></a>
-                                <a href="#" class="ic ic-youtube size-icon-lg"></a>
+                            <div class="social-media">
+                                <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
+                                <a href="#outer"><i class="ic ic-instagram size-icon-lg"></i></a>
+                                <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                                <a href="#outer"><i class="ic ic-youtube size-icon-lg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section class="sc tours-info">
@@ -94,7 +93,7 @@
                 </div>
             </div>
             <div class="summary-buy-tickets hidden-device-md">
-                <a href="#" class="button button-secondary width-full">Buy Ticket</a>
+                <a href="#linkout" class="button button-secondary width-full">Buy Ticket</a>
             </div>
 
             <div class="locations-scroll">
@@ -103,7 +102,7 @@
                     "title" => "XG 1st WORLD TOUR “The first HOWL”",
                     "date" => "2024/8/4 (SUN)",
                     "venue" => "UOB Live, Bangkok",
-                    "status" => "on-sale",
+                    "status" => "coming-soon",
                     "sale-date" => "18 May 24"
                 );
 
@@ -184,14 +183,14 @@
                         <h5 class="weight-bold size-subtitle1">UOB Live, Bangkok</h5>
                         <p>Floor 6, EmSphere, 622 Sukhumvit Rd, Klongton, Khlong Toei, Bangkok</p>
                         <div class="location-button">
-                            <a href="#" class="button button-primary">Get Direction</a>
+                            <a href="#linkout" class="button button-primary">Get Direction</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="ticket-info-buy-tickets hidden-device-md">
-                <a href="#" class="button button-primary width-full">Buy Ticket</a>
+                <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
             </div>
         </div>
     </section>
@@ -201,34 +200,31 @@
             <div class="title">
                 <h1 class="size-h1 weight-bold" data-split data-split-animate>LATEST UPDATE</h1>
             </div>
-            <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-sm">View All Update</a>
         </div>
 
         <div class="two-sides-content">
             <div class="left-side">
-                <div class="tour-box large">
-                    <div class="title-and-date">
-                        <h3 class="size-h3">Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand</h3>
-                        <p class="size-subtitle2 uppercase">21 Nov 2023</p>
-                    </div>
-                    <div class="image">
-                        <img src="./assets/img/design/large-tour-box-image-2.png" alt="tour-box-image">
-                    </div>
-                </div>
+                <?php
+                $box = array(
+                    "link" => "./tours-single.php",
+                    "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
+                    "date" => "21 Nov 2023",
+                    "image" => "./assets/img/design/large-tour-box-image-2.png"
+                );
+                include($root . "include/element-black-box-large.php")
+                ?>
             </div>
-            <div class="separator-gray-dark"></div>
             <div class="right-side">
-                <div class="tour-box large">
-                    <div class="title-and-date">
-                        <h3 class="size-h3">Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand</h3>
-                        <p class="size-subtitle2 uppercase">21 Nov 2023</p>
-                    </div>
-                    <div class="image">
-                        <img src="./assets/img/design/large-tour-box-image-3.png" alt="tour-box-image">
-                    </div>
-                </div>
+                <?php
+                $box = array(
+                    "link" => "./tours-single.php",
+                    "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
+                    "date" => "21 Nov 2023",
+                    "image" => "./assets/img/design/large-tour-box-image-3.png"
+                );
+                include($root . "include/element-black-box-large.php")
+                ?>
             </div>
-            <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-md">View All Update</a>
         </div>
     </section>
 </main>

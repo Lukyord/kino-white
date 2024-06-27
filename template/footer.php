@@ -24,27 +24,27 @@
         </div>
         <div class="footer-links">
             <div class="socials-and-email">
-                <a href="#" class="size-h3">INFO@KINOWHITE.COM</a>
+                <a href="#mail" class="size-h3">INFO@KINOWHITE.COM</a>
                 <div class="socials">
-                    <a href="#" class="ic ic-facebook size-icon-lg"></a>
-                    <a href="#" class="ic ic-instagram size-icon-lg"></a>
-                    <a href="#" class="ic ic-twitter size-icon-lg"></a>
-                    <a href="#" class="ic ic-youtube size-icon-lg"></a>
+                    <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
+                    <a href="#outer"><i class="ic ic-instagram size-icon-lg"></i></a>
+                    <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                    <a href="#outer"><i class="ic ic-youtube size-icon-lg"></i></a>
                 </div>
             </div>
             <div class="links size-subtitle2 weight-bold uppercase">
                 <div>
-                    <a href="#">Business</a>
-                    <a href="#">Services</a>
-                    <a href="#">Papers</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Contact Us</a>
+                    <a href="<?php echo $root; ?>business.php">Business</a>
+                    <a href="<?php echo $root; ?>service.php">Services</a>
+                    <a href="<?php echo $root; ?>papers.php">Papers</a>
+                    <a href="<?php echo $root; ?>careers.php">Careers</a>
+                    <a href="<?php echo $root; ?>contact.php">Contact Us</a>
                 </div>
                 <div>
-                    <a href="#">©2024 Kino white</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Web ::*</a>
+                    <p>©2024 Kino white</p>
+                    <a href="<?php echo $root; ?>terms.php">Privacy</a>
+                    <a href="<?php echo $root; ?>terms.php">Terms</a>
+                    <a href="#outer">Web ::*</a>
                 </div>
             </div>
         </div>
@@ -85,6 +85,7 @@
 <script src="<?php echo $root; ?>assets/js/page-index.js?v=<?php echo time(); ?>"></script>
 <script src="<?php echo $root; ?>assets/js/tours.js?v=<?php echo time(); ?>"></script>
 <script src="<?php echo $root; ?>assets/js/tours-single.js?v=<?php echo time(); ?>"></script>
+<script src="<?php echo $root; ?>assets/js/special-projects-single.js?v=<?php echo time(); ?>"></script>
 
 
 </body>

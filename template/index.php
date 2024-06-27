@@ -79,36 +79,35 @@
             <div class="title">
                 <h1 class="size-h1 weight-bold" data-split data-split-animate>LATEST UPDATE</h1>
             </div>
-            <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-sm">View All Update</a>
+            <a href="<?php echo $root; ?>tours.php" class="button button-secondary animate fadeIn hidden-device-sm">View All Update</a>
         </div>
 
-        <div class="two-sides-content">
+        <div class="two-sides-content gap">
             <div class="left-side">
-                <div class="tour-box large">
-                    <div class="title-and-date">
-                        <h3 class="size-h3">Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand</h3>
-                        <p class="size-subtitle2 uppercase">21 Nov 2023</p>
-                    </div>
-                    <div class="image">
-                        <img src="./assets/img/design/large-tour-box-image-1.png" alt="tour-box-image">
-                    </div>
-                </div>
+                <?php
+                $box = array(
+                    "link" => "./tours-single.php",
+                    "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
+                    "date" => "21 Nov 2023",
+                    "image" => "./assets/img/design/large-tour-box-image-1.png"
+                );
+                include($root . "include/element-black-box-large.php")
+                ?>
             </div>
             <div class="separator-gray-dark"></div>
             <div class="right-side">
                 <?php
                 for ($i = 0; $i < 3; $i++) :
                 ?>
-                    <div class="tour-box">
-                        <div class="title-and-date">
-                            <h3 class="size-h3">Ateez World Tour [The Fellowship : Break The Wall]
-                                In Singapore 2023</h3>
-                            <p class="size-subtitle2 uppercase">21 Nov 2023</p>
-                        </div>
-                        <div class="image">
-                            <img src="./assets/img/design/tour-box-image-1.png" alt="tour-box-image">
-                        </div>
-                    </div>
+                    <?php
+                    $box = array(
+                        "link" => "./tours-single.php",
+                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                        "date" => "21 Nov 2023",
+                        "image" => "./assets/img/design/tour-box-image-1.png"
+                    );
+                    include($root . "include/element-black-box.php")
+                    ?>
                 <?php
                 endfor;
                 ?>

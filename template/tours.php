@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="main" class="tours-main">
+<main id="tours-main" class="tours-main">
 
     <section class="highlight">
         <div class="highlight-content">

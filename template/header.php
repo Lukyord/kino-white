@@ -46,6 +46,9 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/index.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/tours.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/tours-single.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/special-projects-single.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/live-agency.css?v=<?php echo time(); ?>">
+
 
     <!-- JS:LIBRARY -->
     <script src="<?php echo $root; ?>assets/js/library/modernizr-custom.js"></script>
@@ -72,7 +75,7 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
                             <li class="<?php echo (in_array($page, array("tours.php", "tours-single.php"))) ? 'active' : ''; ?>">
                                 <a href="<?php echo $root; ?>tours.php">TOURS</a>
                             </li>
-                            <li class="<?php echo ($page == 'special-projects.php') ? 'active' : ''; ?>">
+                            <li class="<?php echo (in_array($page, array("special-projects.php", "special-projects-single.php"))) ? 'active' : ''; ?>">
                                 <a href="<?php echo $root; ?>special-projects.php">SPECIAL PROJECTS</a>
                             </li>
                             <li class="<?php echo ($page == 'live-agency.php') ? 'active' : ''; ?>">

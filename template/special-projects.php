@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="main" class="tours-main">
+<main id="special-projects-main" class="special-projects-main">
 
     <section class="highlight">
         <div class="highlight-content">
@@ -51,7 +51,50 @@
         </div>
     </section>
 
+    <section class="sc two-sides">
+        <div class="sc-header">
+            <div class="title">
+                <h1 class="size-h1 weight-bold" data-split data-split-animate>SPECIAL EVENTS</h1>
+            </div>
+        </div>
 
+        <div class="two-sides-content">
+            <div class="left-side">
+                <?php
+                for ($i = 0; $i < 2; $i++) :
+                ?>
+                    <?php
+                    $box = array(
+                        "link" => "./special-projects-single.php",
+                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                        "date" => "21 Nov 2023",
+                        "image" => "./assets/img/design/tour-box-image-1.png"
+                    );
+                    include($root . "include/element-black-box.php")
+                    ?>
+                <?php
+                endfor;
+                ?>
+            </div>
+            <div class="right-side">
+                <?php
+                for ($i = 0; $i < 2; $i++) :
+                ?>
+                    <?php
+                    $box = array(
+                        "link" => "./special-projects-single.php",
+                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                        "date" => "21 Nov 2023",
+                        "image" => "./assets/img/design/tour-box-image-1.png"
+                    );
+                    include($root . "include/element-black-box.php")
+                    ?>
+                <?php
+                endfor;
+                ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php include($root . "footer.php"); ?>
