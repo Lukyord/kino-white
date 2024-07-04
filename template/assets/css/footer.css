@@ -15,12 +15,12 @@
 
 .footer-content {
   display: flex;
+  justify-content: space-between;
 }
 
 .company {
   width: 33%;
   max-width: 440px;
-  margin-right: auto;
 }
 
 .company .logo {
@@ -42,11 +42,18 @@
   object-position: center;
 }
 
-.footer-content .location {
+.footer-content .locations {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+}
+
+.footer-content .locations .location {
   width: 25%;
+  width: 22.5vw;
   max-width: 324px;
   text-align: end;
-  padding-left: var(--spacing-sm);
 }
 
 .footer-links {
@@ -55,12 +62,16 @@
   gap: var(--spacing-sm);
 }
 
-.footer-links .socials,
 .footer-links .socials-and-email {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
+}
+
+.footer-links .socials-and-email .socials {
+  display: flex;
+  gap: var(--spacing-lg);
 }
 
 .footer-links .links {
@@ -94,18 +105,19 @@
   .footer-links .socials-and-email {
     flex-direction: column;
     justify-content: unset;
+    grid-gap: var(--spacing-sm);
   }
 
-  .footer-links .socials {
-    justify-content: unset;
-    gap: var(--spacing-xs);
+  .footer-content .locations {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-md);
   }
 
-  .footer-content .location {
+  .footer-content .locations .location {
     width: 100%;
     max-width: unset;
     text-align: unset;
-    padding-left: unset;
   }
 
   .footer-links {

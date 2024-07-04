@@ -21,5 +21,15 @@
         </div>
     </div>
 
-    <a href="<?php echo $root; ?>careers-single.php" class="button button-primary">View Detail</a>
+    <?php
+    $button_class = "button ";
+    if (in_array($page, ["careers.php"])) {
+        $button_class .= "button-primary";
+    } elseif (in_array($page, ["careers-single.php"])) {
+        $button_class .= "button-secondary";
+    } else {
+        $button_class .= "button-primary";
+    }
+    ?>
+    <a href="<?php echo $root; ?>careers-single.php" class="<?php echo $button_class; ?>">View Detail</a>
 </div>

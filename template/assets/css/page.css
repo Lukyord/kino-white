@@ -11,6 +11,12 @@
 
 .page-content .sidebar {
   width: 31.04166666667vw;
+  position: relative;
+}
+
+.page-content .sidebar .sc-header {
+  position: sticky;
+  top: calc(var(--header-height) + var(--spacing-xl));
 }
 
 .page-content .content {

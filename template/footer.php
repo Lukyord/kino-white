@@ -11,16 +11,17 @@
                     </div>
                     <p class="c-gray">We are more than just event organizers; we're architects of unforgettable experiences. With a passion for precision and an eye for creativity, we specialize in curating sensational concerts and flawlessly executed events.</p>
                 </div>
-
-                <div class="location">
-                    <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Bangkok</h3>
-                    <p>Kino White Company Limited</p>
-                    <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
-                </div>
-                <div class="location">
-                    <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Seoul</h3>
-                    <p>Kino White Company Limited</p>
-                    <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+                <div class="locations">
+                    <address class="location">
+                        <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Bangkok</h3>
+                        <p>Kino White Company Limited</p>
+                        <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+                    </address>
+                    <address class="location">
+                        <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Seoul</h3>
+                        <p>Kino White Company Limited</p>
+                        <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+                    </address>
                 </div>
             </div>
             <div class="footer-links">

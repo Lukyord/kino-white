@@ -8,7 +8,7 @@
   z-index: 10000 !important;
   top: auto !important;
   bottom: var(--spacing-container) !important;
-  right: var(--spacing-container) !important;
+  left: var(--spacing-container) !important;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

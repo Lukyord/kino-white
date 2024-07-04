@@ -66,50 +66,29 @@
 }
 
 @media (min-width: 992px) and (max-width: 1600px) {
-  :root {
+  .highlight {
     --font-size-overline: 0.875vw;
     --font-size-button: 0.875vw;
-    --font-size-body: 1vw;
+    --font-size-body: 0.875vw;
     --font-size-subtitle2: 0.8125vw;
     --font-size-subtitle1: 0.875vw;
-    --font-size-h3: 1.42vw;
-    --font-size-h2: 1.25vw;
-    --font-size-h1: 3vw;
+    --font-size-h3: 1.25vw;
+    --font-size-h2: 1.5vw;
+    --font-size-h1: 4vw;
 
     --line-height-overline: 1.125vw;
     --line-height-button: 1.125vw;
-    --line-height-body: 1.375vw;
-    --line-height-subtitle2: 1vw;
+    --line-height-body: 1.125vw;
+    --line-height-subtitle2: 0.9375vw;
     --line-height-subtitle1: 1.125vw;
-    --line-height-h3: 1.25vw;
-    --line-height-h2: 1.5625vw;
-    --line-height-h1: 3.375vw;
+    --line-height-h3: 1.5625vw;
+    --line-height-h2: 1.875vw;
+    --line-height-h1: 4.25vw;
 
     --icon-size-xs: 0.5vw;
     --icon-size: 1.25vw;
     --icon-size-lg: 1.5vw;
     --icon-size-xl: 2vw;
-  }
-
-  .business-main,
-  .cky-consent-container {
-    --font-size-overline: 14px;
-    --font-size-button: 14px;
-    --font-size-body: 14px;
-    --font-size-subtitle2: 12px;
-    --font-size-subtitle1: 14px;
-    --font-size-h3: 20px;
-    --font-size-h2: 24px;
-    --font-size-h1: 64px;
-
-    --line-height-overline: 18px;
-    --line-height-button: 18px;
-    --line-height-body: 18px;
-    --line-height-subtitle2: 15px;
-    --line-height-subtitle1: 18px;
-    --line-height-h3: 25px;
-    --line-height-h2: 30px;
-    --line-height-h1: 68px;
   }
 }
 

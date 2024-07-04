@@ -18,11 +18,11 @@
                 <div class="venue-and-locations uppercase">
                     <div class="venue">
                         <h3 class="size-h3 weight-bold">Venue</h3>
-                        <p>UOB Live</p>
+                        <p class="size-subtitle2">UOB Live</p>
                     </div>
                     <div class="locations">
                         <h3 class="size-h3 weight-bold">Other location</h3>
-                        <p class="size-subtitles2 c-gray margin-top-3xs">
+                        <p class="size-subtitle2 c-gray margin-top-3xs">
                             <?php
                             $location = array("Seoul", "Tokyo", "Taipei", "Hong Kong", "Manilla", "Singapore", "Bangkok", "Jakarta");
                             echo implode("/ ", $location);

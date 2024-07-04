@@ -25,15 +25,17 @@
     <section class="sc no-horizontal-padding">
         <article class="white-gallery-content">
             <div class="article-info uppercase">
-                <div class="header">
-                    <h2 class="size-h2 weight-bold animate fadeIn">BAEK YERIN-SINGLE ALBUM “PISCE:S” PRESS CONFERENCES</h2>
-                    <p class="has-small-font-size animate fadeIn">21 Nov 2023</p>
-                </div>
-                <div class="share">
-                    <p class="size-subtitle2 weight-bold animate fadeIn">share this article</p>
-                    <div class="social-media animate fadeIn">
-                        <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
-                        <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                <div class="article-info-wrapper">
+                    <div class="header">
+                        <h2 class="size-h2 weight-bold animate fadeIn">BAEK YERIN-SINGLE ALBUM “PISCE:S” PRESS CONFERENCES</h2>
+                        <p class="has-small-font-size animate fadeIn">21 Nov 2023</p>
+                    </div>
+                    <div class="share">
+                        <p class="size-subtitle2 weight-bold animate fadeIn">share this article</p>
+                        <div class="social-media animate fadeIn">
+                            <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
+                            <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

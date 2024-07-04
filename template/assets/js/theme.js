@@ -510,6 +510,12 @@ jQuery(function ($) {
 /* VENDOR */
 jQuery(function ($) {
   //RELLAX
+  if ($(".rellax").length) {
+    new Rellax(".rellax", {
+      center: true,
+      speed: -1,
+    });
+  }
 
   //COUNTUP
 

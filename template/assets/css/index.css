@@ -183,7 +183,7 @@
   object-position: center;
 }
 
-.tour-card .tour-card-image:hover > img {
+.tour-card a:hover + .tour-card-image > img {
   transform: scale(1.05);
 }
 

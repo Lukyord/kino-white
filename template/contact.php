@@ -29,7 +29,7 @@
 
         <div class="locations">
             <div class="location">
-                <div class="contact-item uppercase animate fadeIn">
+                <address class="contact-item uppercase animate fadeIn">
                     <a class="link-overlay" href="#outlink">&nbsp;</a>
                     <h3 class="size-h3 weight-bold margin-bottom-2xs">Bangkok</h3>
                     <p class="c-gray padding-bottom-sm">4 Narathiwas Rachanakarin rd., </br>
@@ -37,17 +37,17 @@
                         Thailand 10120
                     </p>
                     <i class="ic ic-arrow-right"></i>
-                </div>
+                </address>
             </div>
             <div class="location">
-                <div class="contact-item uppercase animate fadeIn">
+                <address class="contact-item uppercase animate fadeIn">
                     <a class="link-overlay" href="#outlink">&nbsp;</a>
                     <h3 class="size-h3 weight-bold margin-bottom-2xs">Seoul</h3>
                     <p class="c-gray padding-bottom-sm">Seongsu-ro 1 Gil 14, Seongsu-dong, </br>
                         Seoul, Rep. of Korea 04779
                     </p>
                     <i class="ic ic-arrow-right"></i>
-                </div>
+                </address>
             </div>
         </div>
     </section>

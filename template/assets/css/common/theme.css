@@ -3507,7 +3507,7 @@ html.touchevents a {
 }
 
 .highlight-content-wrapper {
-  width: 125%;
+  width: 157.8947368421%;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
@@ -3550,7 +3550,10 @@ html.touchevents a {
 
 .highlight-content .venue-and-locations > * {
   flex: 1;
-  min-width: 150px;
+}
+
+.highlight-content .venue-and-locations > * > *:first-child {
+  margin-bottom: var(--spacing-3xs);
 }
 
 @media (max-width: 991px) {
@@ -3721,12 +3724,18 @@ html.touchevents a {
 
 .white-gallery-content .article-info {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  grid-gap: var(--spacing-lg);
+  position: relative;
 }
 
-.white-gallery-content .article-info > * > * {
+.white-gallery-content .article-info > .article-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  position: sticky;
+  top: calc(var(--header-height) + var(--spacing-xl));
+}
+
+.white-gallery-content .article-info > * > * > *:not(:last-child) {
   padding-bottom: var(--spacing-sm);
 }
 
@@ -3739,6 +3748,12 @@ html.touchevents a {
     width: calc(100vw - (var(--spacing-sm) * 2));
     margin: 0 auto;
     flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .white-gallery-content .article-info > .article-info-wrapper {
+    position: static;
+    top: unset;
   }
 
   .white-gallery-content .article-content {
@@ -3760,6 +3775,7 @@ html.touchevents a {
 
 .sticky-hero .hero-content {
   position: relative;
+  min-height: 500px;
 }
 
 .sticky-hero .hero-content picture {
