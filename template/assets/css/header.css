@@ -45,6 +45,10 @@
     --logo-height: 18px;
   }
 
+  .header-nav {
+    padding: var(--spacing-sm);
+  }
+
   .header-menu {
     display: none;
     position: fixed;
@@ -55,8 +59,8 @@
 
   .panel .menu {
     background-color: rgba(var(--color-black-rgb), 0.9);
-    padding: 0 var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
+    padding-top: var(--spacing-sm);
     flex-direction: column;
     align-items: start;
   }

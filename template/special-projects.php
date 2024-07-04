@@ -2,12 +2,12 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="special-projects-main" class="special-projects-main">
+<main id="main" class="special-projects-main">
 
-    <section class="highlight">
+    <section class="highlight special-projects">
         <div class="highlight-content">
             <div class="highlight-content-wrapper fadeInLeft animate">
-                <a class="link-overlay" href="./tours-single.php">&nbsp;</a>
+                <a class="link-overlay" href="./special-projects-single.php">&nbsp;</a>
 
                 <p class="sale-date size-overline  weight-bold uppercase">Sale 18 May 24</p>
                 <h2 class="size-h2 weight-bold">XG 1st WORLD TOUR “The first HOWL” Landing at Bangkok</h2>
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="highlight-image">
+        <div class="highlight-image animate fadeIn">
             <a class="link-overlay" href="./special-projects-single.php">&nbsp;</a>
             <?php
             $cover = './assets/img/design/special-projects-highlight.png';
@@ -54,7 +54,7 @@
     <section class="sc two-sides">
         <div class="sc-header">
             <div class="title">
-                <h1 class="size-h1 weight-bold" data-split data-split-animate>SPECIAL EVENTS</h1>
+                <h1 class="size-h1 weight-bold w-60" data-split data-split-animate>SPECIAL EVENTS</h1>
             </div>
         </div>
 

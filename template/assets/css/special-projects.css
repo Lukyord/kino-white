@@ -1,0 +1,14 @@
+/*SPECIAL-PROJECTS====================*/
+.special-projects-main {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1730" viewBox="0 0 1440 1730" fill="none"><path d="M348.621 922.173H0V1730H426.94V1416.06L1440 1730V1271.34L348.621 922.173Z" fill="white" /><path d="M348.621 807.572H0V0H426.94V313.942L1440 0V458.662L348.621 807.572Z" fill="white" /></svg>');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-black);
+}
+
+@media (max-width: 991px) {
+  .special-projects-main {
+    background-size: contain;
+  }
+}

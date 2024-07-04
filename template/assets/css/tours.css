@@ -109,6 +109,9 @@
 }
 
 @media (max-width: 991px) {
+  .tours-main {
+    background-size: contain;
+  }
   .filter-dropdowns {
     display: grid;
     grid-template-columns: 1fr 1fr;

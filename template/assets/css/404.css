@@ -1,0 +1,39 @@
+/*error====================*/
+.error-main {
+  height: 100svh;
+}
+
+.error {
+  width: 100vw;
+  height: 100svh;
+  background-image: url("../img/design/404-bg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.error .error-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: var(--spacing-lg);
+  width: 50%;
+}
+
+.error-content > p {
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+@media (max-width: 991px) {
+  .error .error-content {
+    grid-gap: var(--spacing-sm);
+    width: 100%;
+  }
+
+  .error-content > p {
+    white-space: normal;
+    word-break: break-word;
+  }
+}

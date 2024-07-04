@@ -17,6 +17,7 @@ jQuery(function ($) {
     e.preventDefault();
     _this = $(this);
 
+    // only allow one selected option for sorting
     if (_this.closest(".filter-dropdown-options").hasClass("sort-by")) {
       _this.closest(".options").find(".option").removeClass("active");
     }
@@ -25,9 +26,9 @@ jQuery(function ($) {
   });
 
   // OPEN FILTER POPUP
-  function toggleFilterPopup(e) {
+  function toggleFilterPopup(e, close = false) {
     e.preventDefault();
-    var filterControl = $(e.target).closest(".filter-ctrl");
+    var filterControl = $(".filter-ctrl");
     filterControl.toggleClass("active");
 
     var popup = $(".filter-dropdowns").find(".filter-popup");
@@ -38,6 +39,7 @@ jQuery(function ($) {
     popup.find(".filter-dropdown").toggleClass("active");
     popup.find(".filter-dropdown-options").slideToggle(300);
   }
+
   $(".filter-ctrl > .ctrl").click(function (e) {
     toggleFilterPopup(e);
   });

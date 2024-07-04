@@ -90,6 +90,26 @@
     --icon-size-lg: 1.5vw;
     --icon-size-xl: 2vw;
   }
+
+  .business-main {
+    --font-size-overline: 14px;
+    --font-size-button: 14px;
+    --font-size-body: 14px;
+    --font-size-subtitle2: 12px;
+    --font-size-subtitle1: 14px;
+    --font-size-h3: 20px;
+    --font-size-h2: 24px;
+    --font-size-h1: 64px;
+
+    --line-height-overline: 18px;
+    --line-height-button: 18px;
+    --line-height-body: 18px;
+    --line-height-subtitle2: 15px;
+    --line-height-subtitle1: 18px;
+    --line-height-h3: 25px;
+    --line-height-h2: 30px;
+    --line-height-h1: 68px;
+  }
 }
 
 /*MEDIA QUERIES:MAX====================*/
@@ -184,4 +204,9 @@
 }
 
 @media (max-width: 390px) {
+  :root {
+    --font-size-h1: 12.3076923077vw;
+
+    --line-height-h1: 13.8461538462vw;
+  }
 }

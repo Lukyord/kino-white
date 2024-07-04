@@ -1,0 +1,59 @@
+/*CAREERS-SINGLE====================*/
+
+/*JOB-DESCRIPTION====================*/
+.job-description {
+  display: flex;
+  padding-top: calc(var(--header-height) + var(--spacing-xl));
+  gap: 9.7222222222vw;
+}
+
+.job-description .careers-highlight {
+  width: 30.5555555556vw;
+}
+
+.job-description .careers-description {
+  width: 46.6666666667vw;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.careers-description .description-list > ul {
+  list-style: outside;
+  list-style-type: disc;
+  padding-left: 2em;
+}
+
+@media (max-width: 991px) {
+  .job-description {
+    flex-direction: column;
+    padding-top: calc(var(--header-height) + var(--spacing-lg));
+    gap: var(--spacing-lg);
+  }
+
+  .job-description .careers-highlight {
+    width: 100%;
+  }
+
+  .job-description .careers-highlight .buttons {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    gap: var(--spacing-sm);
+  }
+
+  .job-description .careers-highlight .buttons > a {
+    width: 100%;
+  }
+
+  .job-description .careers-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .description-summary {
+    width: 80%;
+  }
+}

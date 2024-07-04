@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="papers-single-main" class="papers-single-main">
+<main id="main" class="papers-single-main">
     <section class="hero-image">
         <div class="hero-image-wrapper animate matrixZoomOut">
             <?php
@@ -26,19 +26,20 @@
         <article class="white-gallery-content">
             <div class="article-info uppercase">
                 <div class="header">
-                    <h2 class="size-h2 weight-bold">LUCY, Bangkok performance added to first world tour 'written by FLOWER' on July 14th</h2>
-                    <p class="has-small-font-size">21 Nov 2023</p>
+                    <h2 class="size-h2 weight-bold animate fadeIn">LUCY, Bangkok performance added to first world tour 'written by FLOWER' on July 14th</h2>
+                    <p class="has-small-font-size animate fadeIn">21 Nov 2023</p>
                 </div>
                 <div class="share">
-                    <p class="size-subtitle2 weight-bold">share this article</p>
-                    <div class="social-media">
+                    <p class="size-subtitle2 weight-bold animate fadeIn">share this article</p>
+                    <div class="social-media animate fadeIn">
                         <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
                         <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="article-content entry-content">
+            <div class="article-content entry-content entry-fadeIn">
                 <h3>The band LUCY visits Bangkok thanks to strong local love calls.</h3>
+                <p></p>
                 <p>LUCY (Shin Ye-chan, Choi Sang-yeop, Cho Won-sang, Shin Gwang-il) posted a poster for their first world tour 'LUCY 1st WORLD TOUR written by FLOWER in BANGKOK' on their official SNS on the 18th and announced additional performances in Bangkok on July 14th.
                     Lucy, who is visiting Bangkok for the first time through this world tour, is determined to give fans a gift-like experience not only with a special stage but also with music and powerful performances featuring Lucy's enchanting band play to repay the support of
                     her fans.

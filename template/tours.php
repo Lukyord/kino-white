@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="tours-main" class="tours-main">
+<main id="main" class="tours-main">
 
     <section class="highlight">
         <div class="highlight-content">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="highlight-image">
+        <div class="highlight-image animate fadeIn">
             <a class="link-overlay" href="./tours-single.php">&nbsp;</a>
             <?php
             $cover = './assets/img/design/tours-highlight.png';
@@ -53,7 +53,7 @@
 
     <section class="sc bg-white">
         <div class="filter-dropdowns uppercase">
-            <div class="filter-ctrl ">
+            <div class="filter-ctrl animate fadeIn">
                 <a href="javascript:;" class="ctrl size-subtitle1 padding-bottom-sm">filter</a>
             </div>
 
@@ -105,8 +105,8 @@
                 include($root . "include/element-tour-card.php");
             endforeach ?>
         </div>
-        <div class="index-tours-btn">
-            <a href="javascript;:" class="button button-primary animate fadeIn">Load More</a>
+        <div class="index-tours-btn animate fadeIn">
+            <a href="javascript:;" class="button button-primary">Load More</a>
         </div>
 
     </section>

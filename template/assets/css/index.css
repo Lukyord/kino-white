@@ -19,14 +19,13 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 56.25vw;
+  height: 100vh;
 }
 
 .band-bg {
   position: absolute;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
 }
@@ -47,6 +46,7 @@
   height: auto;
   object-fit: contain;
   object-position: center;
+  max-height: 50vh;
 }
 
 .band-logo {
@@ -59,7 +59,7 @@
 .band-logo > img {
   object-fit: contain;
   object-position: center;
-  max-width: 313px;
+  max-width: 100%;
   max-height: 135px;
   display: inline-block;
   vertical-align: top;
@@ -75,13 +75,12 @@
 
 @media (max-width: 991px) {
   .band-slide {
-    height: 216.4102564103vw;
+    height: 100svh;
   }
 
   .band-bg {
-    aspect-ratio: 0.4924242424;
-    width: auto;
-    height: 100%;
+    width: 100vw;
+    height: 100svh;
   }
 
   .band-image {
@@ -91,6 +90,10 @@
   .band-logo > img {
     max-width: 195px;
     max-height: 84px;
+  }
+
+  .hero .swiper-pagination {
+    display: flex;
   }
 }
 
@@ -103,6 +106,10 @@
 .index-tours .tabs {
   height: auto;
   width: fit-content;
+}
+
+.index-tours .swiper {
+  overflow: visible !important;
 }
 
 .index-tours .swiper,
@@ -206,6 +213,15 @@
 }
 
 @media (max-width: 727px) {
+  .index-tours .tabs {
+    width: 100vw;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    overflow: hidden !important;
+  }
+
   .index-tours-btn {
     justify-content: start;
   }

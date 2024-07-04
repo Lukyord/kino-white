@@ -1,4 +1,4 @@
-<div class="filter-dropdown">
+<div class="filter-dropdown animate fadeIn">
     <div class="filter-dropdown-trigger">
         <p class="size-subtitle1"><?php echo $filter_name ?></p>
         <span class="ic ic-chevron-down size-icon-xs"></span>

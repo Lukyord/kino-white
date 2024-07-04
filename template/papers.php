@@ -1,0 +1,88 @@
+<?php $root = ""; ?>
+
+<?php include($root . "header.php"); ?>
+
+<main id="main" class="papers-main">
+    <section class="sc two-sides dark-gradient-bg">
+        <div class="sc-header padding-top-md">
+            <div class="title">
+                <h1 class="size-h1 weight-bold" data-split data-split-animate>PAPERS</h1>
+            </div>
+        </div>
+
+        <div class="two-sides-content gap">
+            <div class="left-side">
+                <?php
+                $box = array(
+                    "link" => "./papers-single.php",
+                    "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
+                    "date" => "21 Nov 2023",
+                    "image" => "./assets/img/design/large-tour-box-image-1.png"
+                );
+                include($root . "include/element-black-box-large.php")
+                ?>
+            </div>
+            <div class="separator-gray-dark"></div>
+            <div class="right-side">
+                <?php
+                for ($i = 0; $i < 3; $i++) :
+                ?>
+                    <?php
+                    $box = array(
+                        "link" => "./papers-single.php",
+                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                        "date" => "21 Nov 2023",
+                        "image" => "./assets/img/design/tour-box-image-1.png"
+                    );
+                    include($root . "include/element-black-box.php")
+                    ?>
+                <?php
+                endfor;
+                ?>
+            </div>
+        </div>
+
+        <div class="two-sides-content gap padding-top-sm">
+            <div class="left-side">
+                <?php
+                for ($i = 0; $i < 3; $i++) :
+                ?>
+                    <?php
+                    $box = array(
+                        "link" => "./papers-single.php",
+                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                        "date" => "21 Nov 2023",
+                        "image" => "./assets/img/design/tour-box-image-1.png"
+                    );
+                    include($root . "include/element-black-box.php")
+                    ?>
+                <?php
+                endfor;
+                ?>
+            </div>
+            <div class="right-side">
+                <?php
+                for ($i = 0; $i < 3; $i++) :
+                ?>
+                    <?php
+                    $box = array(
+                        "link" => "./papers-single.php",
+                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                        "date" => "21 Nov 2023",
+                        "image" => "./assets/img/design/tour-box-image-1.png"
+                    );
+                    include($root . "include/element-black-box.php")
+                    ?>
+                <?php
+                endfor;
+                ?>
+            </div>
+        </div>
+
+        <div class="papers-button">
+            <a href="javascript:;" class="button button-primary">load more</a>
+        </div>
+    </section>
+</main>
+
+<?php include($root . "footer.php"); ?>

@@ -1,12 +1,12 @@
 /* PAGE LOAD */
 jQuery(function ($) {
-  $("#page").imagesLoaded(function () {
-    $(
-      ".entry-content .wp-block-image:not(.alignfull):not(.alignwide) > img, table img"
-    ).each(function () {
-      $(this).css("width", $(this).attr("width"));
-    });
-  });
+  // ANIMATE
+  $(
+    ".entry-fadeIn > *:not(ul, ol, .wp-block-gallery, .wp-block-columns), .entry-fadeIn li"
+  ).addClass("animate fadeIn");
+  $(
+    ".entry-fadeIn *:is(.wp-block-gallery, .wp-block-column, .wp-block-quote) > *, *:is(.wp-block-column) li"
+  ).addClass("animate fadeIn");
 
   if ($("*[data-split]").length) {
     Splitting({
@@ -889,6 +889,23 @@ jQuery(function ($) {
   }
 
   //POPUP
+  $(".open-popup-modal").magnificPopup({
+    type: "inline",
+    preloader: false,
+    closeOnBgClick: true,
+    mainClass: "popup-style popup-style-modal",
+    showCloseBtn: true,
+    closeBtnInside: true,
+    removalDelay: 300,
+    callbacks: {
+      open: function () {
+        $("html").addClass("plugin-mfp-enabled");
+      },
+      close: function () {
+        $("html").removeClass("plugin-mfp-enabled");
+      },
+    },
+  });
 });
 
 /* VIDEO */

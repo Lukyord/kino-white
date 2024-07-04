@@ -1,52 +1,114 @@
 /*LIVE-AGENCY====================*/
 
-/*LIVE-AGENCY-HERO====================*/
-.live-agency-hero {
-  position: sticky;
-  top: 0;
-  z-index: -1;
+/*LIVE-AGENCY-GRID====================*/
+.live-agency-grid {
+  width: 100%;
+  background-color: var(--color-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--spacing-lg) var(--spacing-md);
+  row-gap: var(--spacing-lg);
+  column-gap: var(--spacing-md);
 }
 
-.live-agency-hero .hero-content {
+/* CARD */
+.live-agency-card {
   position: relative;
+  transition: var(--duration) var(--timing-function);
+  overflow: hidden;
 }
 
-.live-agency-hero .hero-content img {
+.live-agency-card-image {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: var(--duration) var(--timing-function);
+}
+
+.live-agency-card-image > img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1.6674937965;
 }
 
-.live-agency-hero .hero-content .hero-content-text {
+.live-agency-card:hover .live-agency-card-image {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.live-agency-card-content {
   position: absolute;
-  left: var(--spacing-md);
-  bottom: var(--spacing-lg);
-  width: 50%;
-  max-width: 650px;
-}
-
-.hero-content-text h1 {
-  padding-bottom: var(--spacing-sm);
-}
-
-@media (max-width: 992px) {
-  .live-agency-hero .hero-content .hero-content-text {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: unset;
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  .live-agency-hero .hero-content {
-    max-height: 50vh;
-  }
-}
-
-/*LIVE-AGENCY-GRID====================*/
-.live-agency-grid {
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 2000px;
-  background-color: aqua;
+  height: auto;
+  transition: var(--duration) var(--timing-function);
+  padding: var(--spacing-md);
+}
+
+.live-agency-card:hover .live-agency-card-content {
+  top: unset;
+  bottom: 0;
+}
+
+.live-agency-card-content .live-agency-card-content-body {
+  display: none;
+}
+
+.live-agency-card-content :is(.territory-and-service, .misc) {
+  display: flex;
+}
+
+.live-agency-card-content :is(.territory-and-service, .misc) > div {
+  width: 50%;
+}
+
+.live-agency-card-content .misc .tag {
+  background-color: var(--color-white);
+  padding: var(--spacing-2xs);
+  width: fit-content;
+}
+
+/* POPUP */
+.live-agency-popup {
+  width: fit-content;
+  max-width: calc(100vw - (var(--spacing-sm) * 2));
+  position: relative;
+}
+
+.live-agency-popup .live-agency-card-content {
+  position: static;
+  left: unset;
+  bottom: unset;
+  padding: var(--spacing-sm);
+  background-color: var(--color-black);
+}
+
+.live-agency-popup .live-agency-card-content .live-agency-card-content-body {
+  display: block;
+}
+
+.live-agency-popup .live-agency-card-content .misc {
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.live-agency-popup .live-agency-card-content .misc > div {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .live-agency-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--spacing-lg) var(--spacing-sm);
+    row-gap: var(--spacing-sm);
+  }
+
+  .live-agency-card-image {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
 }

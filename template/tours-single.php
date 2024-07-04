@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="tours-single-main" class="tours-single-main">
+<main id="main" class="tours-single-main">
     <div class="screen-overlay"></div>
     <div class="gradient-bg"></div>
 
@@ -23,7 +23,7 @@
                 </picture>
             <?php } ?>
         </div>
-        <div class="tours-short-info">
+        <div class="tours-short-info animate fadeIn">
             <div class="tours-short-info-wrapper">
                 <div class="header">
                     <div class="title uppercase">
@@ -67,7 +67,7 @@
     </section>
 
     <section class="sc tours-info">
-        <div class="locations-dropdown hidden-device-md">
+        <div class="locations-dropdown hidden-device-md animate fadeIn">
             <a href="javascript:;" class="locations-dropdown-trigger">
                 <p class="weight-bold uppercase size-h3"> Choose Location</p>
                 <span class="ic ic-chevron-down c-gray"></span>
@@ -75,24 +75,24 @@
         </div>
         <div class="locations" data-lenis-prevent>
             <div class="location-summary uppercase">
-                <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">XG 1st WORLD TOUR “The first HOWL”</h3>
+                <h3 class="uppercase size-h3 weight-bold padding-bottom-sm animate-fadeIn">XG 1st WORLD TOUR “The first HOWL”</h3>
                 <div class="location-summary-body">
-                    <div>
+                    <div class="animate-fadeIn">
                         <h3 class="size-subtitle2 weight-bold">date</h3>
                         <p class="c-gray">2024/8/4 (SUN)</p>
                     </div>
-                    <div>
+                    <div class="animate-fadeIn">
                         <h3 class="size-subtitle2 weight-bold">venue</h3>
                         <p class="c-gray">UOB Live, Bangkok</p>
                     </div>
-                    <div class="location-status on-sale">
+                    <div class="location-status on-sale animate-fadeIn">
                         <p class="c-white size-overline weight-bold">
                             on sale
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="summary-buy-tickets hidden-device-md">
+            <div class="summary-buy-tickets hidden-device-md animate fadeIn">
                 <a href="#linkout" class="button button-secondary width-full">Buy Ticket</a>
             </div>
 
@@ -114,10 +114,10 @@
         </div>
 
         <div class="ticket-info">
-            <h3 class="size-h3">Ticket Information</h3>
+            <h3 class="size-h3 animate fadeIn">Ticket Information</h3>
             <div class="separator-gray-light"></div>
             <div class="info-grid">
-                <div>
+                <div class="animate fadeIn">
                     <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Seating</h4>
                     <table class="ticket-table">
                         <tbody>
@@ -149,47 +149,47 @@
                     </table>
                     <p>ADDITIONAL TRANSACTION FEES AND CREDIT/DEBIT CARD PROCESSING FEES MAY APPLY.</p>
                 </div>
-                <div>
+                <div class="animate fadeIn">
                     <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Age restrictions</h4>
                     <p>Licensed All Ages</p>
                 </div>
-                <div>
+                <div class="animate fadeIn">
                     <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket limits</h4>
                     <p>Per purchaser, per show</p>
                 </div>
-                <div>
+                <div class="animate fadeIn">
                     <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket suppression</h4>
-                    <p>As an anti-scalping measure, ticket delivery will be suppressed until:
+                    <p>As an anti-scalping measure, ticket delivery will be suppressed until:
                         Mon 3 Feb 2025</p>
                 </div>
-                <div>
+                <div class="animate fadeIn">
                     <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Accessibility</h4>
                     <p>For Accessible seating and/or access, call Ticketek's
-                        Accessible Seating booking line: 1300 665 915 
+                        Accessible Seating booking line: 1300 665 915
                         This venue accepts companion cards.</p>
                 </div>
-                <div>
+                <div class="animate fadeIn">
                     <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Set Times</h4>
                     <p>Please check back closer to the show for set times.</p>
                 </div>
             </div>
             <div class="venue padding-top-sm">
-                <h4 class="uppercase weight-bold size-subtitle1">Venue</h4>
+                <h4 class="uppercase weight-bold size-subtitle1 animate fadeIn">Venue</h4>
                 <div class="map-and-address">
-                    <div class="map">
+                    <div class="map animate fadeIn">
                         <img src="./assets/img/design/mock-map.png" alt="mock map">
                     </div>
-                    <div class="address">
+                    <div class="address animate fadeIn">
                         <h5 class="weight-bold size-subtitle1">UOB Live, Bangkok</h5>
                         <p>Floor 6, EmSphere, 622 Sukhumvit Rd, Klongton, Khlong Toei, Bangkok</p>
-                        <div class="location-button">
+                        <div class="location-button animate fadeIn">
                             <a href="#linkout" class="button button-primary">Get Direction</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="ticket-info-buy-tickets hidden-device-md">
+            <div class="ticket-info-buy-tickets hidden-device-md animate fadeIn">
                 <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
             </div>
         </div>

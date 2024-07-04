@@ -1,55 +1,57 @@
-<footer id="footer">
-    <div class="sc footer-nav">
-        <div class="footer-content">
-            <div class="company">
-                <div class="logo">
-                    <div class="logo-image">
-                        <img src="./assets//img/logo-square-white.png" alt="">
+<?php if ($page != '404.php') { ?>
+    <footer id="footer">
+        <div class="sc footer-nav">
+            <div class="footer-content">
+                <div class="company">
+                    <div class="logo">
+                        <div class="logo-image">
+                            <img src="./assets//img/logo-square-white.png" alt="">
+                        </div>
+                        <h2 class="size-h2 weight-bold uppercase nowrap">An enchanted<br />performance creator</h2>
                     </div>
-                    <h2 class="size-h2 weight-bold uppercase nowrap">An enchanted<br />performance creator</h2>
+                    <p class="c-gray">We are more than just event organizers; we're architects of unforgettable experiences. With a passion for precision and an eye for creativity, we specialize in curating sensational concerts and flawlessly executed events.</p>
                 </div>
-                <p class="c-gray">We are more than just event organizers; we're architects of unforgettable experiences. With a passion for precision and an eye for creativity, we specialize in curating sensational concerts and flawlessly executed events.</p>
-            </div>
 
-            <div class="location">
-                <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Bangkok</h3>
-                <p>Kino White Company Limited</p>
-                <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+                <div class="location">
+                    <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Bangkok</h3>
+                    <p>Kino White Company Limited</p>
+                    <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+                </div>
+                <div class="location">
+                    <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Seoul</h3>
+                    <p>Kino White Company Limited</p>
+                    <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+                </div>
             </div>
-            <div class="location">
-                <h3 class="uppercase size-h3 weight-bold padding-bottom-sm">Seoul</h3>
-                <p>Kino White Company Limited</p>
-                <p class="c-gray">4 Narathiwas Rachanakarin rd., Yannawa, Sathorn, Bangkok,Thailand 10120</p>
+            <div class="footer-links">
+                <div class="socials-and-email">
+                    <a href="#mail" class="size-h3">INFO@KINOWHITE.COM</a>
+                    <div class="socials">
+                        <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
+                        <a href="#outer"><i class="ic ic-instagram size-icon-lg"></i></a>
+                        <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                        <a href="#outer"><i class="ic ic-youtube size-icon-lg"></i></a>
+                    </div>
+                </div>
+                <div class="links size-subtitle2 weight-bold uppercase">
+                    <div>
+                        <a href="<?php echo $root; ?>business.php">Business</a>
+                        <a href="<?php echo $root; ?>service.php">Services</a>
+                        <a href="<?php echo $root; ?>papers.php">Papers</a>
+                        <a href="<?php echo $root; ?>careers.php">Careers</a>
+                        <a href="<?php echo $root; ?>contact.php">Contact Us</a>
+                    </div>
+                    <div>
+                        <p>©2024 Kino white</p>
+                        <a href="<?php echo $root; ?>page.php">Privacy</a>
+                        <a href="<?php echo $root; ?>page.php">Terms</a>
+                        <a href="#outer">Web ::*</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-links">
-            <div class="socials-and-email">
-                <a href="#mail" class="size-h3">INFO@KINOWHITE.COM</a>
-                <div class="socials">
-                    <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
-                    <a href="#outer"><i class="ic ic-instagram size-icon-lg"></i></a>
-                    <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
-                    <a href="#outer"><i class="ic ic-youtube size-icon-lg"></i></a>
-                </div>
-            </div>
-            <div class="links size-subtitle2 weight-bold uppercase">
-                <div>
-                    <a href="<?php echo $root; ?>business.php">Business</a>
-                    <a href="<?php echo $root; ?>service.php">Services</a>
-                    <a href="<?php echo $root; ?>papers.php">Papers</a>
-                    <a href="<?php echo $root; ?>careers.php">Careers</a>
-                    <a href="<?php echo $root; ?>contact.php">Contact Us</a>
-                </div>
-                <div>
-                    <p>©2024 Kino white</p>
-                    <a href="<?php echo $root; ?>terms.php">Privacy</a>
-                    <a href="<?php echo $root; ?>terms.php">Terms</a>
-                    <a href="#outer">Web ::*</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+<?php } ?>
 
 <div id="clipboard" style="display:none;">Copied</div>
 </div><!-- CLOSE:#page -->
@@ -85,7 +87,8 @@
 <script src="<?php echo $root; ?>assets/js/page-index.js?v=<?php echo time(); ?>"></script>
 <script src="<?php echo $root; ?>assets/js/tours.js?v=<?php echo time(); ?>"></script>
 <script src="<?php echo $root; ?>assets/js/tours-single.js?v=<?php echo time(); ?>"></script>
-<script src="<?php echo $root; ?>assets/js/special-projects-single.js?v=<?php echo time(); ?>"></script>
+<script src="<?php echo $root; ?>assets/js/live-agency.js?v=<?php echo time(); ?>"></script>
+<script src="<?php echo $root; ?>assets/js/careers.js?v=<?php echo time(); ?>"></script>
 
 
 </body>

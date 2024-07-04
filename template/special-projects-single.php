@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="special-projects-single-main" class="special-projects-single-main">
+<main id="main" class="special-projects-single-main">
     <section class="hero-image">
         <div class="hero-image-wrapper animate matrixZoomOut">
             <?php
@@ -26,18 +26,18 @@
         <article class="white-gallery-content">
             <div class="article-info uppercase">
                 <div class="header">
-                    <h2 class="size-h2 weight-bold">BAEK YERIN-SINGLE ALBUM “PISCE:S” PRESS CONFERENCES</h2>
-                    <p class="has-small-font-size">21 Nov 2023</p>
+                    <h2 class="size-h2 weight-bold animate fadeIn">BAEK YERIN-SINGLE ALBUM “PISCE:S” PRESS CONFERENCES</h2>
+                    <p class="has-small-font-size animate fadeIn">21 Nov 2023</p>
                 </div>
                 <div class="share">
-                    <p class="size-subtitle2 weight-bold">share this article</p>
-                    <div class="social-media">
+                    <p class="size-subtitle2 weight-bold animate fadeIn">share this article</p>
+                    <div class="social-media animate fadeIn">
                         <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
                         <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="article-content entry-content">
+            <div class="article-content entry-content entry-fadeIn">
                 <h3>The band LUCY visits Bangkok thanks to strong local love calls.</h3>
                 <div class="wp-block-image">
                     <img src="./assets/img/design/special-event-content-1.png" alt="content-image">
@@ -55,7 +55,7 @@
     </section>
 
     <section class="special-projects-gallery">
-        <div class="swiper-gallery">
+        <div class="swiper-gallery animate fadeIn">
             <div class="swiper auto insufficient loop centered centered-m clicked grab-m">
                 <div class="swiper-wrapper">
                     <?php

@@ -211,7 +211,7 @@
   height: auto;
 }
 
-.locations .location {
+.tours-info .locations .location {
   padding: var(--spacing-sm);
   border: 1px solid var(--color-gray-light);
   background-color: var(--color-white);
@@ -222,31 +222,31 @@
   cursor: pointer;
 }
 
-.locations .location.active {
+.tours-info .locations .location.active {
   color: var(--color-white);
   background-color: var(--color-black);
 }
 
-.location-body {
+.tours-info .location-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
 }
 
-.location-body div:nth-of-type(3) {
+.tours-info .location-body div:nth-of-type(3) {
   align-self: end;
 }
 
-.location-body div:nth-of-type(4) {
+.tours-info .location-body div:nth-of-type(4) {
   align-self: end;
   justify-self: end;
 }
 
-.location-body > div > h3 {
+.tours-info .location-body > div > h3 {
   padding-bottom: var(--spacing-3xs);
 }
 
-.location-body .location-status {
+.tours-info .location-body .location-status {
   display: inline;
   width: fit-content;
   height: fit-content;
@@ -265,10 +265,6 @@
 .location-status.coming-soon {
   background-color: var(--color-black);
 }
-/* 
-.location.active .location-body .location-status {
-
-} */
 
 /* TICKET INFO */
 .ticket-info {
@@ -434,6 +430,8 @@
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: var(--spacing-2xs);
   }
 
   .location-summary-body div:nth-of-type(3) {
@@ -475,6 +473,10 @@
 
   .location-body {
     grid-row-gap: var(--spacing-2xs);
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
   }
 
   .location-body > div > h3 {

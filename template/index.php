@@ -37,8 +37,8 @@
             <div class="title">
                 <h1 class="size-h1 weight-bold animate" data-split data-split-animate>TOURS</h1>
             </div>
-            <div class="tabs">
-                <div class="swiper auto insufficient">
+            <div class="tabs animate fadeIn">
+                <div class="swiper auto">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><a class="active" href="#current-tours">CURRENT TOURS</a></div>
                         <div class="swiper-slide"> <a class="" href="#upcoming-tours">UPCOMING TOURS</a></div>
@@ -77,7 +77,7 @@
     <section class="sc two-sides">
         <div class="sc-header">
             <div class="title">
-                <h1 class="size-h1 weight-bold" data-split data-split-animate>LATEST UPDATE</h1>
+                <h1 class="size-h1 weight-bold w-60" data-split data-split-animate>LATEST UPDATE</h1>
             </div>
             <a href="<?php echo $root; ?>tours.php" class="button button-secondary animate fadeIn hidden-device-sm">View All Update</a>
         </div>
@@ -112,7 +112,7 @@
                 endfor;
                 ?>
             </div>
-            <a href="#view-all-update" class="button button-secondary animate fadeIn hidden-device-md">View All Update</a>
+            <a href="<?php echo $root; ?>tours.php" class="button button-secondary animate fadeIn hidden-device-md margin-top-xs">View All Update</a>
         </div>
     </section>
 </main>

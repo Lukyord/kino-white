@@ -1,0 +1,15 @@
+/*PAPERS====================*/
+
+/*TWO-SIDES====================*/
+.papers-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--spacing-lg);
+}
+
+@media (max-width: 991px) {
+  .papers-button {
+    justify-content: start;
+  }
+}
