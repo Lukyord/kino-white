@@ -15,8 +15,8 @@
         </div>
     </div>
     <script type="text/javascript">
-        jQuery(function($){
-            $('.cky-consent-container .cky-btn').click(function(e){
+        jQuery(function($) {
+            $('.cky-consent-container .cky-btn').click(function(e) {
                 e.preventDefault();
                 $('.cky-consent-container').fadeOut(200);
             });

@@ -91,7 +91,8 @@
     --icon-size-xl: 2vw;
   }
 
-  .business-main {
+  .business-main,
+  .cky-consent-container {
     --font-size-overline: 14px;
     --font-size-button: 14px;
     --font-size-body: 14px;
