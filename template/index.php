@@ -32,7 +32,7 @@
         </div>
     </section>
 
-    <section class="sc index-tours">
+    <section class="sc index-tours tab-container">
         <div class="sc-header">
             <div class="title">
                 <h1 class="size-h1 weight-bold animate" data-split data-split-animate>TOURS</h1>
@@ -40,39 +40,55 @@
             <div class="tabs animate fadeIn">
                 <div class="swiper auto">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a class="active" href="#current-tours">CURRENT TOURS</a></div>
-                        <div class="swiper-slide"> <a class="" href="#upcoming-tours">UPCOMING TOURS</a></div>
-                        <div class="swiper-slide"> <a class="" href="#past-tours">PAST TOURS</a></div>
+                        <div class="swiper-slide"><a class="tab-link active" href="#current-tours">CURRENT TOURS</a></div>
+                        <div class="swiper-slide"> <a class="tab-link" href="#upcoming-tours">UPCOMING TOURS</a></div>
+                        <div class="swiper-slide"> <a class="tab-link" href="#past-tours">PAST TOURS</a></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tours-grid">
-            <?php
-            $tourDetails = array(
-                "title" => "P1ONEER",
-                "description" => "P1Harmony live tour [P1ustage H : P1oneer",
-                "tour" => "2024 ASIA TOUR",
-                "location" => array("Seoul", "Tokyo", "Taipei", "Hong Kong", "Manilla", "Singapore", "Bangkok", "Jakarta"),
-                "sale-date" => "18 May 2024",
-                "card-image" => ""
-            );
+        <!-- <div class="sc-tab-bound"></div> -->
+        <div class="sc-tab-content animate fadeIn">
+            <div class="tab-content active" id="current-tours">
+                <div class="tours-grid">
+                    <?php
+                    $tourDetails = array(
+                        "title" => "P1ONEER",
+                        "description" => "P1Harmony live tour [P1ustage H : P1oneer",
+                        "tour" => "2024 ASIA TOUR",
+                        "location" => array("Seoul", "Tokyo", "Taipei", "Hong Kong", "Manilla", "Singapore", "Bangkok", "Jakarta"),
+                        "sale-date" => "18 May 2024",
+                        "card-image" => ""
+                    );
 
-            $tours_arr = array();
+                    $tours_arr = array();
 
-            for ($i = 0; $i < 8; $i++) {
-                $tourDetails['card-image'] = "./assets/img/design/tour-card-" . (9 + $i) . ".png";
-                $tours_arr[] = $tourDetails;
-            }
+                    for ($i = 0; $i < 8; $i++) {
+                        $tourDetails['card-image'] = "./assets/img/design/tour-card-" . (9 + $i) . ".png";
+                        $tours_arr[] = $tourDetails;
+                    }
 
-            foreach ($tours_arr as $tour) :
-                include($root . "include/element-tour-card.php");
-            endforeach ?>
+                    foreach ($tours_arr as $tour) :
+                        include($root . "include/element-tour-card.php");
+                    endforeach ?>
+                </div>
+            </div>
+
+            <div class="tab-content" id="upcoming-tours">
+                <p class="margin-bottom-xl">upcoming tours</p>
+            </div>
+
+            <div class="tab-content" id="past-tours">
+                <p class="margin-bottom-xl">past tours</p>
+            </div>
         </div>
+
         <div class="index-tours-btn">
             <a href="<?php echo $root; ?>tours.php" class="button button-primary animate fadeIn">View All Update</a>
         </div>
+
     </section>
+
 
     <section class="sc two-sides">
         <div class="sc-header">

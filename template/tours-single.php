@@ -66,7 +66,7 @@
         </div>
     </section>
 
-    <section class="sc tours-info">
+    <section class="sc tours-info tab-container">
         <div class="locations-dropdown hidden-device-md animate fadeIn">
             <a href="javascript:;" class="locations-dropdown-trigger">
                 <p class="weight-bold uppercase size-h3"> Choose Location</p>
@@ -102,8 +102,9 @@
                     "title" => "XG 1st WORLD TOUR “The first HOWL”",
                     "date" => "2024/8/4 (SUN)",
                     "venue" => "UOB Live, Bangkok",
-                    "status" => "coming-soon",
-                    "sale-date" => "18 May 24"
+                    "status" => "on-sale",
+                    "sale-date" => "18 May 24",
+                    "tab" => "tab"
                 );
 
                 for ($i = 0; $i < 4; $i++) {
@@ -112,87 +113,132 @@
                 ?>
             </div>
         </div>
-
-        <div class="ticket-info">
-            <h3 class="size-h3 animate fadeIn">Ticket Information</h3>
-            <div class="separator-gray-light"></div>
-            <div class="info-grid">
-                <div class="animate fadeIn">
-                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Seating</h4>
-                    <table class="ticket-table">
-                        <tbody>
-                            <tr>
-                                <td>A Reserve seating</td>
-                                <td>$249.90</td>
-                            </tr>
-                            <tr>
-                                <td>General Admission standing</td>
-                                <td>$199.90</td>
-                            </tr>
-                            <tr>
-                                <td>B Reserve seating</td>
-                                <td>$199.90</td>
-                            </tr>
-                            <tr>
-                                <td>C Reserve seating</td>
-                                <td>$159.90</td>
-                            </tr>
-                            <tr>
-                                <td>D Reserve seating</td>
-                                <td>$129.90</td>
-                            </tr>
-                            <tr>
-                                <td>Changemaker ticket</td>
-                                <td>$351.85</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>ADDITIONAL TRANSACTION FEES AND CREDIT/DEBIT CARD PROCESSING FEES MAY APPLY.</p>
-                </div>
-                <div class="animate fadeIn">
-                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Age restrictions</h4>
-                    <p>Licensed All Ages</p>
-                </div>
-                <div class="animate fadeIn">
-                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket limits</h4>
-                    <p>Per purchaser, per show</p>
-                </div>
-                <div class="animate fadeIn">
-                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket suppression</h4>
-                    <p>As an anti-scalping measure, ticket delivery will be suppressed until:
-                        Mon 3 Feb 2025</p>
-                </div>
-                <div class="animate fadeIn">
-                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Accessibility</h4>
-                    <p>For Accessible seating and/or access, call Ticketek's
-                        Accessible Seating booking line: 1300 665 915
-                        This venue accepts companion cards.</p>
-                </div>
-                <div class="animate fadeIn">
-                    <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Set Times</h4>
-                    <p>Please check back closer to the show for set times.</p>
-                </div>
-            </div>
-            <div class="venue padding-top-sm">
-                <h4 class="uppercase weight-bold size-subtitle1 animate fadeIn">Venue</h4>
-                <div class="map-and-address">
-                    <div class="map animate fadeIn object-fit">
-                        <!-- <img src="./assets/img/design/mock-map.png" alt="mock map"> -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11200.675829730526!2d-75.6876061!3d45.42609535!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce04ff4fe494ef%3A0x26bb54f60c29f6e!2sParliament+Hill!5e0!3m2!1sen!2sca!4v1528808935681" title="mock iframe"></iframe>
-
-                    </div>
-                    <div class=" address animate fadeIn">
-                        <h5 class="weight-bold size-subtitle1">UOB Live, Bangkok</h5>
-                        <p>Floor 6, EmSphere, 622 Sukhumvit Rd, Klongton, Khlong Toei, Bangkok</p>
-                        <div class="location-button animate fadeIn">
-                            <a href="#linkout" class="button button-primary">Get Direction</a>
+        <div class="sc-tab-content animate fadeIn">
+            <div class="tab-content active" id="tab-0">
+                <div class="ticket-info">
+                    <h3 class="size-h3 animate fadeIn">Ticket Information</h3>
+                    <div class="separator-gray-light"></div>
+                    <div class="info-grid">
+                        <div class="animate fadeIn">
+                            <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Seating</h4>
+                            <table class="ticket-table">
+                                <tbody>
+                                    <tr>
+                                        <td>A Reserve seating</td>
+                                        <td>$249.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>General Admission standing</td>
+                                        <td>$199.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B Reserve seating</td>
+                                        <td>$199.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C Reserve seating</td>
+                                        <td>$159.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>D Reserve seating</td>
+                                        <td>$129.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Changemaker ticket</td>
+                                        <td>$351.85</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>ADDITIONAL TRANSACTION FEES AND CREDIT/DEBIT CARD PROCESSING FEES MAY APPLY.</p>
+                        </div>
+                        <div class="animate fadeIn">
+                            <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Age restrictions</h4>
+                            <p>Licensed All Ages</p>
+                        </div>
+                        <div class="animate fadeIn">
+                            <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket limits</h4>
+                            <p>Per purchaser, per show</p>
+                        </div>
+                        <div class="animate fadeIn">
+                            <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Ticket suppression</h4>
+                            <p>As an anti-scalping measure, ticket delivery will be suppressed until:
+                                Mon 3 Feb 2025</p>
+                        </div>
+                        <div class="animate fadeIn">
+                            <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Accessibility</h4>
+                            <p>For Accessible seating and/or access, call Ticketek's
+                                Accessible Seating booking line: 1300 665 915
+                                This venue accepts companion cards.</p>
+                        </div>
+                        <div class="animate fadeIn">
+                            <h4 class="uppercase weight-bold padding-bottom-xs size-subtitle1">Set Times</h4>
+                            <p>Please check back closer to the show for set times.</p>
                         </div>
                     </div>
+                    <div class="venue padding-top-sm">
+                        <h4 class="uppercase weight-bold size-subtitle1 animate fadeIn">Venue</h4>
+                        <div class="map-and-address">
+                            <div class="map animate fadeIn object-fit">
+                                <!-- <img src="./assets/img/design/mock-map.png" alt="mock map"> -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11200.675829730526!2d-75.6876061!3d45.42609535!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce04ff4fe494ef%3A0x26bb54f60c29f6e!2sParliament+Hill!5e0!3m2!1sen!2sca!4v1528808935681" title="mock iframe"></iframe>
+
+                            </div>
+                            <div class=" address animate fadeIn">
+                                <h5 class="weight-bold size-subtitle1">UOB Live, Bangkok</h5>
+                                <p>Floor 6, EmSphere, 622 Sukhumvit Rd, Klongton, Khlong Toei, Bangkok</p>
+                                <div class="location-button animate fadeIn">
+                                    <a href="#linkout" class="button button-primary">Get Direction</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-info-buy-tickets hidden-device-md animate fadeIn">
+                        <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-content" id="tab-1">
+                <div class="ticket-info">
+                    <div class="padding-bottom-3xl">1</div>
+                    <div class="padding-bottom-3xl">1</div>
+                    <div class="padding-bottom-3xl">1</div>
+                    <div class="padding-bottom-3xl">1</div>
+                    <div class="padding-bottom-3xl">1</div>
+                    <div class="padding-bottom-3xl">1</div>
+                    <div class="ticket-info-buy-tickets hidden-device-md animate fadeIn">
+                        <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
+                    </div>
                 </div>
             </div>
+            <div class="tab-content" id="tab-2">
 
-            <div class="ticket-info-buy-tickets hidden-device-md animate fadeIn">
-                <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
+                <div class="ticket-info">
+
+                    <div class="padding-bottom-3xl">2</div>
+                    <div class="padding-bottom-3xl">2</div>
+                    <div class="padding-bottom-3xl">2</div>
+                    <div class="padding-bottom-3xl">2</div>
+                    <div class="padding-bottom-3xl">2</div>
+                    <div class="padding-bottom-3xl">2</div>
+                    <div class="ticket-info-buy-tickets hidden-device-md animate fadeIn">
+                        <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-3">
+                <div class="ticket-info">
+                    <div class="padding-bottom-3xl">3</div>
+                    <div class="padding-bottom-3xl">3</div>
+                    <div class="padding-bottom-3xl">3</div>
+                    <div class="padding-bottom-3xl">3</div>
+                    <div class="padding-bottom-3xl">3</div>
+                    <div class="padding-bottom-3xl">3</div>
+                    <div class="ticket-info-buy-tickets hidden-device-md animate fadeIn">
+                        <a href="#linkout" class="button button-primary width-full">Buy Ticket</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

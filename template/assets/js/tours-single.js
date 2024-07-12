@@ -32,7 +32,7 @@ jQuery(function ($) {
   $(".tours-info > .locations > .locations-scroll > .location").click(function (
     e
   ) {
-    e.preventDefault();
+    // e.preventDefault();
 
     var _this = $(this);
     var button = _this.find(".button");

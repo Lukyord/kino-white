@@ -226,7 +226,16 @@
 .tours-info .location-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
   height: 100%;
+}
+
+.tours-info .location-body .location-button {
+  z-index: 10;
+}
+
+.tours-info .location-body > h3 {
+  grid-column: 1 / span 2;
 }
 
 .tours-info .location-body div:nth-of-type(3) {
@@ -263,14 +272,18 @@
 }
 
 /* TICKET INFO */
-.ticket-info {
+.tours-info .sc-tab-content {
   width: 64%;
+}
+
+.ticket-info {
+  width: 100%;
   display: flex;
   flex-direction: column;
   grid-gap: var(--spacing-sm);
 }
 
-.ticket-info > .info-grid {
+.ticket-info .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--spacing-md);
@@ -409,8 +422,8 @@
     rotate: 180deg;
   }
 
-  .locations .location {
-    min-height: unset;
+  .tours-info .locations .location {
+    min-height: 92px;
     visibility: visible !important;
     animation: none !important;
   }
@@ -468,12 +481,16 @@
     border: none;
   }
 
-  .location-body {
+  .tours-info .location-body {
     grid-row-gap: var(--spacing-2xs);
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
+  }
+
+  .tours-info .location-body > h3 {
+    display: none;
   }
 
   .location-body > div > h3 {
@@ -485,6 +502,10 @@
   }
 
   /* TICKET INFO */
+  .tours-info .sc-tab-content {
+    width: 100%;
+  }
+
   .ticket-info {
     width: 100%;
     padding: var(--spacing-lg) var(--spacing-xs);
