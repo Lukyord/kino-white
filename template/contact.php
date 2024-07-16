@@ -12,28 +12,27 @@
             <div class="info">
                 <div class="contact-item uppercase animate fadeIn">
                     <h3 class="size-h3 weight-bold margin-bottom-2xs">Business Enquiries</h3>
-                    <p class="c-gray"><a href="#mail" class="black-text-hover underline-hover">info@kinowhite.com</a> </br>
-                        +27 72 611 3343
+                    <p class="c-gray">
+                        <a href="mailto:ddd@ddd.com" class="black-text-hover underline-hover">info@kinowhite.com</a> <br>
+                        <a href="tel:0087645678" class="black-text-hover underline-hover">+27 72 611 3343</a>
                     </p>
                 </div>
                 <div class="contact-item uppercase animate fadeIn">
                     <h3 class="size-h3 weight-bold margin-bottom-2xs">Hours</h3>
-                    <p class="c-gray">Monday-Friday </br>
+                    <p class="c-gray">Monday-Friday <br>
                         10am-6pm
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="separator-gray-light"></div>
-
         <div class="locations">
             <div class="location">
                 <address class="contact-item uppercase animate fadeIn">
                     <a class="link-overlay" href="#outlink">&nbsp;</a>
                     <h3 class="size-h3 weight-bold margin-bottom-2xs">Bangkok</h3>
-                    <p class="c-gray padding-bottom-sm">4 Narathiwas Rachanakarin rd., </br>
-                        Yannawa, Sathorn, Bangkok, </br>
+                    <p class="c-gray padding-bottom-sm">4 Narathiwas Rachanakarin rd., <br>
+                        Yannawa, Sathorn, Bangkok, <br>
                         Thailand 10120
                     </p>
                     <i class="ic ic-arrow-right"></i>
@@ -43,7 +42,7 @@
                 <address class="contact-item uppercase animate fadeIn">
                     <a class="link-overlay" href="#outlink">&nbsp;</a>
                     <h3 class="size-h3 weight-bold margin-bottom-2xs">Seoul</h3>
-                    <p class="c-gray padding-bottom-sm">Seongsu-ro 1 Gil 14, Seongsu-dong, </br>
+                    <p class="c-gray padding-bottom-sm">Seongsu-ro 1 Gil 14, Seongsu-dong, <br>
                         Seoul, Rep. of Korea 04779
                     </p>
                     <i class="ic ic-arrow-right"></i>

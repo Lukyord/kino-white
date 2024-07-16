@@ -66,7 +66,8 @@
 }
 
 @media (min-width: 992px) and (max-width: 1600px) {
-  .highlight {
+  .highlight,
+  .careers-highlight-slide .careers-highlight {
     --font-size-overline: 0.875vw;
     --font-size-button: 0.875vw;
     --font-size-body: 0.875vw;

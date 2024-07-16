@@ -8,6 +8,7 @@
 .contact-hero .contact-info {
   display: flex;
   height: 30.1388888889vw;
+  border-bottom: 1px solid var(--color-gray-light);
 }
 
 .contact-info .header {

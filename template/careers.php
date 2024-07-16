@@ -59,7 +59,7 @@
                                         <div class="type size-overline">Full time</div>
                                     </div>
                                     <div class="description">
-                                        <p>We seeks a Project Manager with proven project management experience and strong organizational skills. The ideal candidate excels in multitasking, leadership, and communication, and is proficient in project management software. </p>
+                                        <p class="size-h3">We seeks a Project Manager with proven project management experience and strong organizational skills. The ideal candidate excels in multitasking, leadership, and communication, and is proficient in project management software. </p>
                                     </div>
                                     <div class="info uppercase size-subtitle2">
                                         <div class="info-item">

@@ -119,6 +119,14 @@
   height: auto;
 }
 
+.careers-highlight-slide .swiper {
+  overflow: visible !important;
+}
+
+.parallax-gallery {
+  transform: translateX(calc(11.3888888889vw - 2.1vw));
+}
+
 .parallax-gallery .swiper .swiper-slide {
   width: fit-content !important;
 }
@@ -157,6 +165,14 @@
 }
 
 @media (max-width: 991px) {
+  .careers-highlight-slide .swiper {
+    overflow: hidden !important;
+  }
+
+  .parallax-gallery {
+    transform: unset;
+  }
+
   .parallax-gallery .parallax-image {
     width: 80vw;
     height: 70vh;

@@ -53,6 +53,7 @@ jQuery(function ($) {
         mouseWheel: true,
         speed: 1400,
         longSwipesMs: 1400,
+        loop: true,
         slidesPerView: "auto",
         centeredSlides: true,
         parallax: true,

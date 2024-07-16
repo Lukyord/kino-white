@@ -6,7 +6,7 @@
     <section class="sc job-description">
         <div class="careers-highlight bg-white static gap-lg padding-0">
             <div class="header">
-                <div class="type size-overline uppercase animate fadeIn">Full time</div>
+                <div class="type size-overline uppercase animate fadeIn weight-bold">Full time</div>
                 <h2 class="size-h1 weight-bold padding-bottom-sm padding-top-sm uppercase" data-split data-split-animate>Project Manager</h2>
                 <div class="description animate fadeIn">
                     <p>We seeks a Project Manager with proven project management experience and strong organizational skills. The ideal candidate excels in multitasking, leadership, and communication, and is proficient in project management software. </p>
@@ -29,16 +29,16 @@
                     <h3 class="weight-bold">Position</h3>
                     <p class="c-gray">1</p>
                 </div>
-            </div>
-            <div class="buttons">
                 <div class="share">
                     <p class="size-subtitle2 weight-bold uppercase padding-bottom-sm animate fadeIn">share this post</p>
                     <div class="social-media animate fadeIn">
-                        <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
-                        <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                        <a href="javascript:;" onclick="fbShare()"><i class="ic ic-facebook size-icon-lg"></i></a>
+                        <a href="javascript:;" onclick="tweetShare()"><i class="ic ic-twitter size-icon-lg"></i></a>
                     </div>
                 </div>
-                <a href="#linkout" class="button button-primary animate fadeIn">Apply Resume</a>
+                <div class="job-description-button">
+                    <a href="#linkout" class="button button-primary animate fadeIn">Apply Resume</a>
+                </div>
             </div>
         </div>
 

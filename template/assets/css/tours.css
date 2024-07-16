@@ -25,6 +25,7 @@
 
 .filter-dropdown {
   position: relative;
+  padding-bottom: var(--spacing-2xs) !important;
 }
 
 .filter-dropdown.disable-toggle .filter-dropdown-trigger {

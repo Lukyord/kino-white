@@ -99,36 +99,35 @@
         </div>
 
         <div class="two-sides-content gap">
-            <div class="left-side">
+            <?php
+            $box = array(
+                "link" => "./tours-single.php",
+                "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
+                "date" => "21 Nov 2023",
+                "image" => "./assets/img/design/large-tour-box-image-1.png",
+                "extra_class" => "large"
+            );
+            include($root . "include/element-black-box.php")
+            ?>
+            <?php
+            for ($i = 0; $i < 3; $i++) :
+            ?>
                 <?php
                 $box = array(
                     "link" => "./tours-single.php",
-                    "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
+                    "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
                     "date" => "21 Nov 2023",
-                    "image" => "./assets/img/design/large-tour-box-image-1.png"
+                    "image" => "./assets/img/design/tour-box-image-1.png",
+                    "extra_class" => ""
                 );
-                include($root . "include/element-black-box-large.php")
+                include($root . "include/element-black-box.php")
                 ?>
-            </div>
-            <div class="separator-gray-dark"></div>
-            <div class="right-side">
-                <?php
-                for ($i = 0; $i < 3; $i++) :
-                ?>
-                    <?php
-                    $box = array(
-                        "link" => "./tours-single.php",
-                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
-                        "date" => "21 Nov 2023",
-                        "image" => "./assets/img/design/tour-box-image-1.png"
-                    );
-                    include($root . "include/element-black-box.php")
-                    ?>
-                <?php
-                endfor;
-                ?>
-            </div>
-            <a href="<?php echo $root; ?>tours.php" class="button button-secondary animate fadeIn hidden-device-md margin-top-xs">View All Update</a>
+            <?php
+            endfor;
+            ?>
+        </div>
+        <div class=" animate fadeIn hidden-device-md margin-top-md">
+            <a href="<?php echo $root; ?>tours.php" class="button button-secondary">View All Update</a>
         </div>
     </section>
 </main>

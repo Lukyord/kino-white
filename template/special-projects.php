@@ -5,11 +5,26 @@
 <main id="main" class="special-projects-main">
 
     <section class="highlight special-projects">
+        <?php
+        $status = "sold-out";
+        $sale_date = "18 May 24";
+        $status_class = "";
+        $status_text = "";
+        if ($status == "on-sale") {
+            $status_class = "on-sale";
+            $status_text = "on sale";
+        } elseif ($status == "sold-out") {
+            $status_class = "sold-out";
+            $status_text = "sold out";
+        } elseif ($status == "coming-soon") {
+            $status_class = "coming-soon";
+            $status_text = "sale " . $sale_date;
+        }
+        ?>
         <div class="highlight-content">
             <div class="highlight-content-wrapper fadeInLeft animate">
                 <a class="link-overlay" href="./special-projects-single.php">&nbsp;</a>
-
-                <p class="sale-date size-overline  weight-bold uppercase">Sale 18 May 24</p>
+                <p class="tour-status size-overline  weight-bold uppercase <?php echo $status_class ?>"><?php echo $status_text ?></p>
                 <h2 class="size-h2 weight-bold">XG 1st WORLD TOUR “The first HOWL” Landing at Bangkok</h2>
                 <p class="date size-subtitle1 c-gray">2024/8/4 (SUN)</p>
                 <p class="description size-h3">
@@ -59,40 +74,40 @@
         </div>
 
         <div class="two-sides-content">
-            <div class="left-side">
+            <?php
+            for ($i = 0; $i < 2; $i++) :
+            ?>
                 <?php
-                for ($i = 0; $i < 2; $i++) :
+                $box = array(
+                    "link" => "./special-projects-single.php",
+                    "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                    "date" => "21 Nov 2023",
+                    "image" => "./assets/img/design/tour-box-image-1.png",
+                    "extra_class" => ""
+
+                );
+                include($root . "include/element-black-box.php")
                 ?>
-                    <?php
-                    $box = array(
-                        "link" => "./special-projects-single.php",
-                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
-                        "date" => "21 Nov 2023",
-                        "image" => "./assets/img/design/tour-box-image-1.png"
-                    );
-                    include($root . "include/element-black-box.php")
-                    ?>
+            <?php
+            endfor;
+            ?>
+            <?php
+            for ($i = 0; $i < 2; $i++) :
+            ?>
                 <?php
-                endfor;
+                $box = array(
+                    "link" => "./special-projects-single.php",
+                    "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
+                    "date" => "21 Nov 2023",
+                    "image" => "./assets/img/design/tour-box-image-1.png",
+                    "extra_class" => ""
+
+                );
+                include($root . "include/element-black-box.php")
                 ?>
-            </div>
-            <div class="right-side">
-                <?php
-                for ($i = 0; $i < 2; $i++) :
-                ?>
-                    <?php
-                    $box = array(
-                        "link" => "./special-projects-single.php",
-                        "title" => "Ateez World Tour [The Fellowship : Break The Wall] In Singapore 2023",
-                        "date" => "21 Nov 2023",
-                        "image" => "./assets/img/design/tour-box-image-1.png"
-                    );
-                    include($root . "include/element-black-box.php")
-                    ?>
-                <?php
-                endfor;
-                ?>
-            </div>
+            <?php
+            endfor;
+            ?>
         </div>
     </section>
 </main>

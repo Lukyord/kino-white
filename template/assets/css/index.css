@@ -187,18 +187,10 @@
   transform: scale(1.05);
 }
 
-.tour-card .tour-card-image .tour-sale-date {
+.tour-card .tour-card-image .tour-status {
   position: absolute;
   top: var(--spacing-2xs);
   left: var(--spacing-2xs);
-}
-
-.tour-card .tour-card-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  justify-content: space-between;
-  flex: 1;
 }
 
 .index-tours-btn {

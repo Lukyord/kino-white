@@ -1,4 +1,4 @@
-<div class="black-box animate fadeIn">
+<div class="black-box animate fadeIn <?php echo $box["extra_class"] ?>">
     <a class="link-overlay" href="<?php echo $box["link"] ?>">&nbsp;</a>
     <div class="title-and-date">
         <h3 class="size-h3"><?php echo $box["title"] ?></h3>

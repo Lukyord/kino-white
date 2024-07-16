@@ -95,9 +95,9 @@
   --border-color: var(--color-black);
   --border: var(--border-width) var(--border-style) var(--border-color);
 
-  --input-height: 40px;
-  --input-spacing-x: 0px;
-  --input-spacing-y: 0.3em;
+  --input-height: 25px;
+  --input-spacing-x: 10px;
+  --input-spacing-y: 5px;
   --input-border: var(--border-width) var(--border-style) var(--border-color);
 
   --button-height: 49px;
@@ -606,7 +606,7 @@ button,
 [role="button"] {
   cursor: pointer;
 }
-button,
+/* button,
 input,
 textarea,
 select {
@@ -628,7 +628,7 @@ select {
   letter-spacing: inherit;
   text-indent: inherit;
   color: inherit;
-}
+} */
 fieldset {
   border: 0 !important;
   background: none !important;
@@ -1419,13 +1419,13 @@ a:hover {
 
 /*FORM====================*/
 *:is(input, textarea, select) {
-  background: none;
+  /* background: none;
   border-radius: 0;
   border: 0;
   border-bottom: var(--input-border);
   font-family: var(--font-body);
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-subtitle2);
   line-height: normal;
   text-transform: inherit;
   text-align: left;
@@ -1435,7 +1435,7 @@ a:hover {
   display: block;
   width: 100%;
   height: var(--input-height);
-  padding: var(--input-spacing-y) var(--input-spacing-x);
+  padding: var(--input-spacing-y) var(--input-spacing-x); */
 }
 textarea {
   --height: calc(var(--input-height) * 2);
@@ -3368,13 +3368,26 @@ html.touchevents a {
 }
 
 /* SALE DATE  */
-.sale-date {
+.sale-date,
+.tour-status {
   color: var(--color-white);
   background-color: var(--color-black);
-  padding: var(--spacing-2xs);
+  padding: 10px;
   width: fit-content;
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
+}
+
+.tour-status.on-sale {
+  background-color: var(--color-green);
+}
+
+.tour-status.sold-out {
+  background-color: var(--color-gray);
+}
+
+.tour-status.coming-soon {
+  background-color: var(--color-black);
 }
 
 /* TOURS GRID */
@@ -3383,86 +3396,6 @@ html.touchevents a {
   grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
   gap: var(--spacing-sm);
   padding-bottom: var(--spacing-lg);
-}
-
-/* BLACK BOX */
-.black-box {
-  position: relative;
-  padding: var(--spacing-sm);
-  display: flex;
-  transition: var(--duration) var(--timing-function);
-  width: 100%;
-  height: auto;
-  gap: var(--spacing-sm);
-  background-color: var(--color-black);
-  border-radius: 4px;
-}
-
-.black-box.large {
-  height: 100%;
-}
-
-.black-box .title-and-date {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-}
-
-.black-box.large .title-and-date {
-  justify-content: unset;
-  gap: var(--spacing-sm);
-}
-
-.black-box .title-and-date .date {
-  text-transform: uppercase;
-}
-
-.black-box .image {
-  width: 15.8227848101%;
-}
-
-.black-box.large .image {
-  flex: 1;
-  width: 51.2658227848%;
-}
-
-.black-box .image > img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: center;
-}
-
-@media (min-width: 992px) {
-  .black-box:hover {
-    background-color: var(--color-gray-dark);
-  }
-}
-
-@media (max-width: 991px) {
-  .black-box {
-    /* padding: var(--spacing-xs); */
-    padding: 0;
-  }
-
-  .black-box.large {
-    flex-direction: column-reverse;
-    gap: var(--spacing-2xs);
-  }
-
-  .black-box .image {
-    width: 27.9329608939%;
-  }
-
-  .black-box.large .image {
-    width: 100%;
-  }
-
-  .black-box .title-and-date {
-    gap: var(--spacing-sm);
-  }
 }
 
 /* SEPARATOR GRAY LIGHT */
@@ -3625,39 +3558,105 @@ html.touchevents a {
 }
 
 .two-sides-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
 }
 
 .two-sides-content.gap {
-  gap: var(--spacing-sm);
-}
-
-.two-sides-content > div {
-  width: 50%;
-  height: auto;
-}
-
-.two-sides-content .separator-gray-dark {
-  display: none;
-  width: 100%;
-  border: 1px solid var(--color-gray-dark);
+  column-gap: var(--spacing-sm);
 }
 
 @media (max-width: 991px) {
   .two-sides-content {
-    flex-direction: column;
-    gap: var(--spacing-md);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: var(--spacing-md);
+  }
+}
+
+/* BLACK BOX */
+.black-box {
+  position: relative;
+  padding: var(--spacing-sm);
+  display: flex;
+  transition: var(--duration) var(--timing-function);
+  width: 100%;
+  height: auto;
+  gap: var(--spacing-sm);
+  background-color: var(--color-black);
+  border-radius: 4px;
+}
+
+.black-box.large {
+  grid-row: span 3;
+}
+
+.black-box .title-and-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.black-box.large .title-and-date {
+  justify-content: unset;
+  gap: var(--spacing-sm);
+}
+
+.black-box .title-and-date .date {
+  text-transform: uppercase;
+}
+
+.black-box .image {
+  width: 15.8227848101%;
+}
+
+.black-box.large .image {
+  flex: 1;
+  width: 51.2658227848%;
+}
+
+.black-box .image > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 992px) {
+  .black-box:hover {
+    background-color: var(--color-gray-dark);
+  }
+}
+
+@media (max-width: 991px) {
+  .black-box {
+    padding: 0;
   }
 
-  .two-sides-content > div {
+  .black-box.large {
+    flex-direction: column-reverse;
+    gap: var(--spacing-2xs);
+    grid-row: unset;
+  }
+
+  .black-box.large:not(:last-child) {
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-gray-dark);
+  }
+
+  .black-box .image {
+    width: 27.9329608939%;
+  }
+
+  .black-box.large .image {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
   }
 
-  .two-sides-content .separator-gray-dark {
-    display: block;
+  .black-box .title-and-date {
+    gap: var(--spacing-sm);
   }
 }
 
@@ -3775,7 +3774,6 @@ html.touchevents a {
 
 .sticky-hero .hero-content {
   position: relative;
-  min-height: 500px;
 }
 
 .sticky-hero .hero-content picture {
@@ -3789,6 +3787,8 @@ html.touchevents a {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  max-width: unset;
+  min-height: 546px;
 }
 
 .sticky-hero .hero-content .hero-content-text {
@@ -3804,6 +3804,12 @@ html.touchevents a {
 }
 
 @media (max-width: 991px) {
+  .sticky-hero .hero-content picture img {
+    width: 100%;
+    height: 100%;
+    min-height: unset;
+  }
+
   .sticky-hero .hero-content .hero-content-text {
     left: 0;
     bottom: 0;
@@ -3821,7 +3827,7 @@ html.touchevents a {
 
 @media (max-width: 575px) {
   .sticky-hero .hero-content {
-    height: 60vh;
+    height: 65vh;
   }
 }
 
@@ -3909,8 +3915,8 @@ html.touchevents a {
   padding: var(--spacing-2xl);
   position: absolute;
   top: 0;
-  right: 9.02777777778vw;
-  width: 41.9444444444vw;
+  right: 7.5vw;
+  width: 42.9444444444vw;
   height: 100%;
   z-index: 1;
 }
@@ -3922,9 +3928,10 @@ html.touchevents a {
 }
 
 .careers-highlight .header .type {
-  padding: var(--spacing-2xs);
+  padding: 10px;
   background-color: var(--color-gray);
   display: inline-block;
+  color: var(--color-white);
 }
 
 .careers-highlight .info {
@@ -3932,6 +3939,7 @@ html.touchevents a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-gap: var(--spacing-lg);
+  align-items: center;
 }
 
 .careers-highlight .info .info-item > h3 {
@@ -3947,6 +3955,18 @@ html.touchevents a {
 .careers-highlight .buttons .arrow-buttons {
   display: flex;
   gap: var(--spacing-2xs);
+}
+
+@media (min-width: 992px) and (max-width: 1330px) {
+  .careers-highlight {
+    gap: 2.5112781955vw;
+    padding-top: 2.5112781955vw;
+    padding-bottom: 2.5112781955vw;
+  }
+
+  .careers-highlight .description {
+    font-size: 1.5037593985vw !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -3965,6 +3985,14 @@ html.touchevents a {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .careers-highlight .info .job-description-button {
+    grid-column: 1 / span 2;
+  }
+
+  .careers-highlight .info .job-description-button > a {
+    width: 100%;
   }
 
   .careers-highlight .info {

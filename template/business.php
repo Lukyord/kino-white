@@ -6,14 +6,16 @@
 
     <section class="business-hero">
         <div class="business-hero-container">
-            <h1 class="c-white size-h1 uppercase weight-bold rellax" data-split data-split-animate>KINO White </br> An enchanted performance creator</h1>
+            <h1 class="c-white size-h1 uppercase weight-bold rellax" data-split data-split-animate>KINO White <br> An enchanted performance creator</h1>
             <div class="business-hero-image animate fadeIn rellax">
                 <img src="./assets/img/design/business-hero-image.png" alt="business-hero-image">
             </div>
             <div class="business-hero-text animate fadeIn">
                 <p class="c-white size-h3 rellax">With the aim of delivering unsurpassed entertainment experience to our audience. Kino White incorporates international and domestic touring, booking agencies, artist and talent management, record labels, music publishing, merchandising, creative and marketing services, event production, film and more. We are beyond passionate about what we do.</p>
             </div>
-            <?php include($root . "include/element-globe-vector.php") ?>
+            <div class="globe-vector hidden-device-sm rellax">
+                <img src="./assets/img/design/globe-vector.svg" alt="globe-vector">
+            </div>
         </div>
     </section>
 
@@ -25,7 +27,6 @@
                     <h3 class="size-h3 animate fadeIn">Artist Representation</h3>
                     <p class="animate fadeIn">We take charge of managing budget, artiste booking, coordinate with promoters, managing schedule, managing crew, production, searching and managing sponsor, marketing and financial control of concerts and tour for clients and partners across the regions.</p>
                 </div>
-                <div class="separator-gray-dark hidden-device-sm"></div>
                 <div class="point rellax">
                     <h3 class="size-h3 animate fadeIn">Concert & Tour Management</h3>
                     <p class="animate fadeIn">We take charge of managing budget, artiste booking, coordinate with promoters, managing schedule, managing crew, production, searching and managing sponsor, marketing and financial control of concerts and tour for clients and partners across the regions.</p>

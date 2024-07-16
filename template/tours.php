@@ -5,11 +5,27 @@
 <main id="main" class="tours-main">
 
     <section class="highlight">
+        <?php
+        $status = "coming-soon";
+        $sale_date = "18 May 24";
+        $status_class = "";
+        $status_text = "";
+        if ($status == "on-sale") {
+            $status_class = "on-sale";
+            $status_text = "on sale";
+        } elseif ($status == "sold-out") {
+            $status_class = "sold-out";
+            $status_text = "sold out";
+        } elseif ($status == "coming-soon") {
+            $status_class = "coming-soon";
+            $status_text = "sale " . $sale_date;
+        }
+        ?>
         <div class="highlight-content">
             <div class="highlight-content-wrapper fadeInLeft animate">
                 <a class="link-overlay" href="./tours-single.php">&nbsp;</a>
 
-                <p class="sale-date size-overline  weight-bold uppercase">Sale 18 May 24</p>
+                <p class="tour-status size-overline  weight-bold uppercase <?php echo $status_class ?>"><?php echo $status_text ?></p>
                 <h2 class="size-h2 weight-bold">XG 1st WORLD TOUR “The first HOWL” Landing at Bangkok</h2>
                 <p class="date size-subtitle1 c-gray">2024/8/4 (SUN)</p>
                 <p class="description size-h3">
@@ -52,7 +68,7 @@
     </section>
 
     <section class="sc bg-white">
-        <div class="filter-dropdowns uppercase">
+        <form class="filter-dropdowns uppercase">
             <div class="filter-ctrl animate fadeIn">
                 <a href="javascript:;" class="ctrl size-subtitle1 padding-bottom-sm">filter</a>
             </div>
@@ -81,7 +97,7 @@
                 include($root . "include/element-filter-dropdown.php");
             endforeach;
             ?>
-        </div>
+        </form>
 
         <div class="tours-grid">
             <?php
@@ -89,6 +105,7 @@
                 "title" => "P1ONEER",
                 "description" => "P1Harmony live tour [P1ustage H : P1oneer",
                 "tour" => "2024 ASIA TOUR",
+                "status" => "sold-out",
                 "location" => array("Seoul", "Tokyo", "Taipei", "Hong Kong", "Manilla", "Singapore", "Bangkok", "Jakarta"),
                 "sale-date" => "18 May 2024",
                 "card-image" => ""

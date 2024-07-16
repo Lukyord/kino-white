@@ -33,8 +33,8 @@
                     <div class="share">
                         <p class="size-subtitle2 weight-bold animate fadeIn">share this article</p>
                         <div class="social-media animate fadeIn">
-                            <a href="#outer"><i class="ic ic-facebook size-icon-lg"></i></a>
-                            <a href="#outer"><i class="ic ic-twitter size-icon-lg"></i></a>
+                            <a href="javascript:;" onclick="fbShare()"><i class="ic ic-facebook size-icon-lg"></i></a>
+                            <a href="javascript:;" onclick="tweetShare()"><i class="ic ic-twitter size-icon-lg"></i></a>
                         </div>
                     </div>
                 </div>
