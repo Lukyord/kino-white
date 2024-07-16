@@ -29,24 +29,22 @@ jQuery(function ($) {
     .addClass("button-secondary")
     .removeClass("button-primary");
 
-  $(".tours-info > .locations > .locations-scroll > .location").click(function (
-    e
-  ) {
-    // e.preventDefault();
+  $(".tours-info > .locations > .locations-scroll > .location").click(
+    function () {
+      var _this = $(this);
+      var button = _this.find(".button");
 
-    var _this = $(this);
-    var button = _this.find(".button");
+      $(".tours-info > .locations")
+        .find(".active")
+        .removeClass("active")
+        .find(".button")
+        .removeClass("button-secondary")
+        .addClass("button-primary");
 
-    $(".tours-info > .locations")
-      .find(".active")
-      .removeClass("active")
-      .find(".button")
-      .removeClass("button-secondary")
-      .addClass("button-primary");
-
-    _this.addClass("active");
-    button.removeClass("button-primary").addClass("button-secondary");
-  });
+      _this.addClass("active");
+      button.removeClass("button-primary").addClass("button-secondary");
+    }
+  );
 });
 
 //SHOW STICKY BUY TICKET BUTTON
@@ -107,10 +105,7 @@ $(document).ready(function () {
 // LOCATION DROPDOWN MOBILE
 jQuery(function ($) {
   $(".tours-info > .locations-dropdown > .locations-dropdown-trigger").click(
-    function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
+    function () {
       var _this = $(this);
       var toursInfo = _this.closest(".tours-info");
       var screenOverlay = $(".screen-overlay");
@@ -165,22 +160,22 @@ jQuery(function ($) {
 
 // RESET LOCATIONS DROPDOWN ON SCREEN CHANGE
 jQuery(function ($) {
-  function resetLocationsDropdownIfOpen() {
-    if (window.matchMedia("(min-width: 992px)").matches) {
-      var toursInfo = $(".tours-info");
-      var dropdownTrigger = toursInfo.find(".locations-dropdown-trigger");
-      if (dropdownTrigger.hasClass("active")) {
-        toursInfo.find(".locations-scroll").slideToggle();
-        toursInfo.find(".locations-scroll").show();
-        $(".screen-overlay").removeClass("show");
-        dropdownTrigger.removeClass("active");
-      }
+  function resetLocationsDropdown() {
+    var toursInfo = $(".tours-info");
+    var dropdownTrigger = toursInfo.find(".locations-dropdown-trigger");
+
+    if (window.innerWidth >= 992) {
+      toursInfo.find(".locations-scroll").show();
+      $(".screen-overlay").removeClass("show");
+      dropdownTrigger.removeClass("active");
+    } else {
+      toursInfo.find(".locations-scroll").css("display", "none");
     }
   }
 
-  resetLocationsDropdownIfOpen();
+  resetLocationsDropdown();
 
   $(window).resize(function () {
-    resetLocationsDropdownIfOpen();
+    resetLocationsDropdown();
   });
 });

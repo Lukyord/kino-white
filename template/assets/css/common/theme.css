@@ -606,7 +606,7 @@ button,
 [role="button"] {
   cursor: pointer;
 }
-/* button,
+button,
 input,
 textarea,
 select {
@@ -628,7 +628,7 @@ select {
   letter-spacing: inherit;
   text-indent: inherit;
   color: inherit;
-} */
+}
 fieldset {
   border: 0 !important;
   background: none !important;

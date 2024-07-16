@@ -58,7 +58,8 @@
                         "tour" => "2024 ASIA TOUR",
                         "location" => array("Seoul", "Tokyo", "Taipei", "Hong Kong", "Manilla", "Singapore", "Bangkok", "Jakarta"),
                         "sale-date" => "18 May 2024",
-                        "card-image" => ""
+                        "card-image" => "",
+                        "status" => "on-sale"
                     );
 
                     $tours_arr = array();

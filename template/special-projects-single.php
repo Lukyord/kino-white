@@ -89,9 +89,11 @@
                     "link" => "./tours-single.php",
                     "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
                     "date" => "21 Nov 2023",
-                    "image" => "./assets/img/design/event-box-image-1.png"
+                    "image" => "./assets/img/design/event-box-image-1.png",
+                    "extra_class" => "large"
+
                 );
-                include($root . "include/element-black-box-large.php")
+                include($root . "include/element-black-box.php")
                 ?>
             </div>
             <div class="right-side">
@@ -100,9 +102,10 @@
                     "link" => "./tours-single.php",
                     "title" => "Macklemore announces 2nd & final Perth show plus Melbourne venue upgrade due to phenomenal ticket demand",
                     "date" => "21 Nov 2023",
-                    "image" => "./assets/img/design/event-box-image-2.png"
+                    "image" => "./assets/img/design/event-box-image-2.png",
+                    "extra_class" => "large"
                 );
-                include($root . "include/element-black-box-large.php")
+                include($root . "include/element-black-box.php")
                 ?>
             </div>
         </div>

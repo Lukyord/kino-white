@@ -113,6 +113,7 @@
                 ?>
             </div>
         </div>
+
         <div class="sc-tab-content animate fadeIn">
             <div class="tab-content active" id="tab-0">
                 <div class="ticket-info">
